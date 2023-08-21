@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.bouncingImage {
+  animation: bounce 1s infinite alternate;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.message {
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
