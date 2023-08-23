@@ -1,6 +1,6 @@
 # Mapachillo Space 🌌
 
-<img src="https://mapachillo.space/mapachillo.png" alt="Mapachillo Space Logo" width="300"/>
+<img src="https://mapachillo.space/mapachillo.png" alt="Mapachillo Space Logo" width="300" style="background-color: black; display: inline-block;" />
 
 Astral Musteloid Art Collective
 
