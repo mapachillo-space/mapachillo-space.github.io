@@ -12,12 +12,12 @@ const App = () => {
   return (
     <div className="App">
       <audio autoPlay loop volume="0.2">
-        <source src="%PUBLIC_URL%/background-music.mp3" type="audio/mpeg" />
+        <source src="/background-music.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
       <img
-        src="https://i.imgur.com/dNKSJSb.png"
+        src="/mapachillo.png"
         alt="Under Construction"
         className="bouncingImage"
       />
