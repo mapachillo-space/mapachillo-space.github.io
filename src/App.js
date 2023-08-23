@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
@@ -9,13 +9,37 @@ const App = () => {
     top: Math.random() * 100 + 'vh',
   }));
 
+  const audioRef = useRef();
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.2;
+    }
+
+    const handleKeyDown = (e) => {
+      if (e.code === 'Space') {
+        if (audioRef.current.paused) {
+          audioRef.current.play();
+        } else {
+          audioRef.current.pause();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <audio autoPlay loop volume="0.2">
+      <audio ref={audioRef} autoPlay loop>
         <source src="/background-music.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-
       <img
         src="/mapachillo.png"
         alt="Under Construction"
