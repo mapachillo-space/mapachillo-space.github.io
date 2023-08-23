@@ -1,6 +1,6 @@
 # Mapachillo Space 🌌
 
-![Mapachillo Space Logo](https://mapachillo.space/mapachillo.png)
+<img src="https://mapachillo.space/mapachillo.png" alt="Mapachillo Space Logo" width="300"/>
 
 Astral Musteloid Art Collective
 
@@ -15,6 +15,7 @@ displaced mexican artists drifting through the void
 ## Connect with Us
 
 🪐 [Website](https://mapachillo.space)
+
 💫 [Instagram](https://www.instagram.com/mapachillo.space/)
 
 ---
