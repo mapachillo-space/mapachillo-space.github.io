@@ -6,7 +6,7 @@ Astral Musteloid Art Collective
 
 ## About Us
 
-displaced mexican artists drifting through the void
+displaced mexican artists and tinkerers drifting through the void
 
 ## Projects
 
