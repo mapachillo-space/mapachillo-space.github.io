@@ -20,7 +20,7 @@
       text-align: center;
     }
 
-    h2 {
+    h2, h3 {
       color: #a66695;
       margin-top: 2rem;
     }
@@ -31,12 +31,6 @@
 
     ul {
       padding-left: 1.2rem;
-    }
-
-    .back-link {
-      display: block;
-      margin-top: 3rem;
-      text-align: center;
     }
 
     a {
@@ -56,74 +50,183 @@
       border-radius: 1rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
+    .lang-toggle {
+      display: block;
+      margin: 1rem auto 2rem;
+      text-align: center;
+    }
+
+    button {
+      background-color: #ffe0ea;
+      color: #3b2f2f;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
     .section img {
-  display: block;
-  margin: 0.5rem auto;
-  max-width: 100%;
-}
+      display: block;
+      margin: 0.5rem auto;
+      max-width: 100%;
+    }
   </style>
 </head>
 <body>
   <h1>🍞 Dos de Milanesa</h1>
 
-  <div class="section">
-    <h2>Historia</h2>
-    <p>El cerdito Miguel tiene un carrito donde vende tortas, pero sus clientes tienen gustos bastante peculiares. Con el paso del tiempo, su carrito se vuelve cada vez más popular: visita nuevas ciudades, llegan más y más clientes, y Miguel empieza a incorporar nuevas tortas e ingredientes. Ahora, Miguel tiene que atenderlos a todos rápidamente y mantenerlos contentos, mientras trata de no desperdiciar comida y maximizar sus ganancias.</p>
+  <div class="lang-toggle">
+    <button onclick="toggleLanguage()">🌐 Cambiar idioma / Switch Language</button>
   </div>
 
-  <div class="section">
-    <h2>Controles</h2>
-    <p>Usa la perilla izquierda para desplazarte por los ingredientes y el botón que está debajo para seleccionarlos. Una vez que armes la torta, usa la perilla derecha para moverte por la barra hasta llegar al carril correcto con el cliente adecuado. Luego, usa el rodillo grande que está encima de la perilla y deslízalo hacia arriba para entregar la torta (también puedes tirarla a la basura si lo deslizas hacia abajo). Además, puedes agregar salsas e ingredientes especiales presionando los botones que están encima del rodillo.</p>
+  <!-- Spanish -->
+  <div id="lang-es">
+    <div class="section">
+      <h2>Historia</h2>
+      <p>El cerdito Miguel tiene un carrito donde vende tortas...</p>
+    </div>
+
+    <div class="section">
+      <h2>Controles</h2>
+      <p>Usa la perilla izquierda para desplazarte por los ingredientes...</p>
+    </div>
+
+    <div class="section">
+      <h2>Personajes</h2>
+      <h3>Miguel</h3>
+      <img src="miggy-piggy-sketch.svg" alt="Dibujo de Miguel el cerdito" style="width: 150px; border-radius: 1rem;" />
+      <p><strong>Miguel:</strong> A Miguel le encanta cocinar...</p>
+
+      <h3>Clientes</h3>
+      <ul>
+        <li><strong>Gatitos (Channel):</strong> Impacientes...<br>
+          <img src="cat-sketch.svg" alt="Gatito cliente Channel" style="width: 120px;" />
+        </li>
+        <li><strong>Perritos (Xolos):</strong> Muy emocionados por probar tortas...</li>
+        <li><strong>Camaleones:</strong> Se disfrazan...</li>
+        <li><strong>Mamut:</strong> Amables...</li>
+      </ul>
+
+      <h3>Obstáculos</h3>
+      <ul>
+        <li><strong>Tlacuaches:</strong> Obstáculo que aparece en la barra y roba ingredientes...</li>
+      </ul>
+
+      <h3>Otros Personajes</h3>
+      <ul>
+        <li><strong>Contador:</strong> Presenta ganancias y estadísticas.</li>
+        <li><strong>Vendedor de ingredientes:</strong> Provee ingredientes nuevos.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ingredientes</h2>
+      <p><strong>Base:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Jamón, Queso</p>
+      <p><strong>Extras:</strong> Lechuga, Tomate, Cebolla, Frijoles</p>
+      <p><strong>Complementos:</strong> Salsa roja, Salsa verde, Aguacate, Crema, Cilantro</p>
+    </div>
+
+    <div class="section">
+      <h2>Bio del Equipo</h2>
+      <ul>
+        <li>Gem Alvarez Perez</li>
+        <li>Adriana Rubio Segura</li>
+        <li>Arturo de la Cruz</li>
+        <li>Felipe</li>
+        <li>Hideki Garcia Goo</li>
+      </ul>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Regresar a Mapachillo Space</a>
+    </div>
   </div>
 
-<div class="section">
-  <h2>Personajes</h2>
+  <!-- English -->
+  <div id="lang-en" style="display: none;">
+    <div class="section">
+      <h2>Story</h2>
+      <p>Miguel the piglet runs a torta cart, but his customers have strange tastes...</p>
+    </div>
 
-  <h3>Miguel</h3>
-  <img src="miggy-piggy-sketch.svg" alt="Dibujo de Miguel el cerdito" style="width: 150px; border-radius: 1rem; margin-bottom: 1rem;" />
-  <p><strong>Miguel:</strong> A Miguel le encanta cocinar y descubrir nuevas recetas. Está orgulloso de poder identificar qué le gusta a sus clientes para mantenerlos felices. Disfruta experimentar con ingredientes y sorprenderlos con combinaciones inesperadas y deliciosas. Si hay muchos clientes esperando, se estresa y empieza a moverse más rápido… se pone histérico.</p>
+    <div class="section">
+      <h2>Controls</h2>
+      <p>Use the left knob to scroll through ingredients, the button below to select them...</p>
+    </div>
 
-  <h3>Clientes</h3>
-  <ul>
-     <img src="cat-sketch.svg" alt="Gatito cliente Channel" style="width: 120px; margin-top: 0.5rem; border-radius: 0.5rem;" />
-    <li> <strong>Gatitos:</strong> Impacientes. Gritan si tardas, y Miguel no puede escuchar a los demás. Ingrediente favorito: 🐱<br /> </li>
-    <li><strong>Perritos:</strong> Muy emocionados por probar tortas. Si se tarda mucho, cambian de opinión. Ingrediente favorito: 🐾</li>
-    <li><strong>Camaleones:</strong> Se disfrazan, pero los delatan sus ojitos. Si les das el ingrediente especial equivocado, rechazan la orden. Ingrediente favorito: 🦎</li>
-    <li><strong>Mamut:</strong> Amables, pero con memoria perfecta. Si reciben una orden equivocada, no vuelven. Ingrediente favorito: 🐘</li>
-  </ul>
+    <div class="section">
+      <h2>Characters</h2>
+      <h3>Miguel</h3>
+      <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" style="width: 150px; border-radius: 1rem;" />
+      <p><strong>Miguel:</strong> Miguel loves to cook and create new recipes...</p>
 
-  <h3>Obstáculos</h3>
-  <ul>
-    <li><strong>Tlacuaches:</strong> Obstáculo que aparece en la barra y roba ingredientes. Si la torta tiene el ingrediente favorito del cliente, se espanta.</li>
-  </ul>
+      <h3>Customers</h3>
+      <ul>
+        <li><strong>Kittens (Channel):</strong> They’re impatient...<br>
+          <img src="cat-sketch.svg" alt="Channel kitten customer" style="width: 120px;" />
+        </li>
+        <li><strong>Puppies (Xolos):</strong> Very excited to try tortas...</li>
+        <li><strong>Chameleons:</strong> Disguised, but their eyes give them away...</li>
+        <li><strong>Mammoths:</strong> Kind, but have perfect memory...</li>
+      </ul>
 
-  <h3>Otros Personajes</h3>
-  <ul>
-    <li><strong>Contador:</strong> Al final de la partida, presenta las ganancias y estadísticas.</li>
-    <li><strong>Vendedor de ingredientes:</strong> Provee ingredientes nuevos para mejorar el carrito.</li>
-  </ul>
-</div>
+      <h3>Obstacles</h3>
+      <ul>
+        <li><strong>Opossums:</strong> Appear on the bar and try to steal ingredients...</li>
+      </ul>
 
-  <div class="section">
-    <h2>Ingredientes</h2>
-    <p><strong>Base:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Jamón, Queso</p>
-    <p><strong>Extras:</strong> Lechuga, Tomate, Cebolla, Frijoles</p>
-    <p><strong>Complementos:</strong> Salsa roja, Salsa verde, Aguacate, Crema, Cilantro</p>
+      <h3>Other Characters</h3>
+      <ul>
+        <li><strong>Accountant:</strong> Shows your final score and stats.</li>
+        <li><strong>Ingredient Vendor:</strong> Sells new ingredients for your cart.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ingredients</h2>
+      <p><strong>Main:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Ham, Cheese</p>
+      <p><strong>Extras:</strong> Lettuce, Tomato, Onion, Beans</p>
+      <p><strong>Toppings:</strong> Red salsa, Green salsa, Avocado, Cream, Cilantro</p>
+    </div>
+
+    <div class="section">
+      <h2>Team Bio</h2>
+      <ul>
+        <li>Gem Alvarez Perez</li>
+        <li>Adriana Rubio Segura</li>
+        <li>Arturo de la Cruz</li>
+        <li>Felipe</li>
+        <li>Hideki Garcia Goo</li>
+      </ul>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">← Back to Mapachillo Space</a>
+    </div>
   </div>
 
-  <div class="section">
-    <h2>Bio del Equipo</h2>
-    <ul>
-      <li>Gem Alvarez Perez</li>
-      <li>Adriana Rubio Segura</li>
-      <li>Arturo de la Cruz</li>
-      <li>Felipe</li>
-      <li>Hideki Garcia Goo</li>
-    </ul>
-  </div>
+  <script>
+    function toggleLanguage() {
+      const es = document.getElementById("lang-es");
+      const en = document.getElementById("lang-en");
 
-  <div class="back-link">
-    <a href="index.html">← Regresar a Mapachillo Space</a>
-  </div>
+      if (es.style.display === "none") {
+        es.style.display = "block";
+        en.style.display = "none";
+      } else {
+        es.style.display = "none";
+        en.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
