@@ -175,6 +175,30 @@
   margin-bottom: 0.5rem;
   color: #a66695;
 }
+
+.dev-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dev-card {
+  background: #fff5f0;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dev-card img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.dev-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
   </style>
 </head>
 <body>
@@ -287,32 +311,21 @@
   </div>
 
     <div class="section" id="noticias">
-  <h2>🛠️ Noticias de Desarrollo</h2>
-
-  <div style="margin-bottom: 2rem;">
-    <img src="draft1.png" alt="Boceto inicial" style="width: 100%; border-radius: 0.5rem;" />
+ <h2>🛠️ Noticias de Desarrollo</h2>
+<div class="dev-grid">
+  <div class="dev-card">
+    <img src="draft1.png" alt="Boceto inicial" />
     <p><strong>01 marzo 2025</strong> — Primer boceto visual del concepto del juego. Incluye ideas iniciales de personajes, sistema de puntaje y propuestas para las habilidades especiales de cada uno.</p>
   </div>
-      
-
-  <div style="margin-bottom: 2rem;">
-    <img src="demo1.gif" alt="Mini demo animada" style="width: 100%; border-radius: 0.5rem;" />
-<p><strong>01 marzo 2025</strong> — Diseño del esquema de hardware para el control del videojuego: perillas, rodillo y botones dedicados a ingredientes especiales. Este concepto está inspirado en los controles clásicos de juegos arcade.</p>  </div>
-
-  <div style="margin-bottom: 2rem;">
-    <img src="demo-1.gif" alt="Esquema de controles físicos" style="width: 100%; border-radius: 0.5rem;" />
-<p><strong>03 de marzo de 2025</strong> — Diseño de Miguel, el personaje principal del juego, e integración inicial en el entorno del demo. Actualmente, Miguel puede ser controlado por el jugador y moverse de lado a lado dentro del escenario.</p></div>
-
-    <div class="section" id="equipo">
-    <h2>Bio del Equipo</h2>
-    <ul>
-      <li>Gem Alvarez Perez</li>
-      <li>Adriana Rubio Segura</li>
-      <li>Arturo de la Cruz</li>
-      <li>Felipe</li>
-      <li>Hideki Garcia Goo</li>
-    </ul>
+  <div class="dev-card">
+    <img src="demo1.gif" alt="Mini demo animada" />
+    <p><strong>01 marzo 2025</strong> — Diseño del esquema de hardware para el control del videojuego: perillas, rodillo y botones dedicados a ingredientes especiales. Este concepto está inspirado en los controles clásicos de juegos arcade.</p>
   </div>
+  <div class="dev-card">
+    <img src="demo-1.gif" alt="Miguel en el demo" />
+    <p><strong>03 de marzo de 2025</strong> — Diseño de Miguel, el personaje principal del juego, e integración inicial en el entorno del demo. Actualmente, Miguel puede ser controlado por el jugador y moverse de lado a lado dentro del escenario.</p>
+  </div>
+</div>
 
     <div class="back-link">
       <a href="index.html">← Regresar a Mapachillo Space</a>
