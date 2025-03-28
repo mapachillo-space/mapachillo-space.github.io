@@ -151,18 +151,30 @@
 </head>
 <body>
   <h1>🍞 Dos de Milanesa</h1>
-
-  <nav class="top-menu">
+<nav class="top-menu">
   <div class="menu-container">
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="menu-links" id="menuLinks">
+
+    <!-- Spanish Menu -->
+    <div class="menu-links" id="menuLinks-es">
       <button onclick="toggleLanguage()">🌐 ES / EN</button>
       <a href="#historia">📜 Historia</a>
-      <a href="controles"> Controles</a>
+      <a href="#controles">🕹️ Controles</a>      
       <a href="#personajes">🎭 Personajes</a>
       <a href="#ingredientes">🥪 Ingredientes</a>
       <a href="#noticias">🛠️ Noticias</a>
       <a href="#equipo">👩‍🚀 Equipo</a>
+    </div>
+
+    <!-- English Menu -->
+    <div class="menu-links" id="menuLinks-en" style="display: none;">
+      <button onclick="toggleLanguage()">🌐 EN / ES</button>
+      <a href="#story">📜 Story</a>
+      <a href="#controls">🕹️ Controls</a>
+      <a href="#characters">🎭 Characters</a>
+      <a href="#ingredients">🥪 Ingredients</a>
+      <a href="#devnews">🛠️ Dev News</a>
+      <a href="#team">👩‍🚀 Team</a>
     </div>
   </div>
 </nav>
@@ -252,17 +264,17 @@
 
   <!-- English -->
   <div id="lang-en" style="display: none;">
-    <div class="section" id="historia">
+    <div class="section" id="story">
       <h2>Story</h2>
       <p>Miguel the piglet runs a torta cart, but his customers have strange tastes...</p>
     </div>
 
-    <div class="section" id="control">
+    <div class="section" id="controls">
       <h2>Controls</h2>
       <p>Use the left knob to scroll through ingredients, the button below to select them...</p>
     </div>
 
-    <div class="section" id="personajes">
+    <div class="section" id="characters">
       <h2>Characters</h2>
       <h3>Miguel</h3>
       <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" style="width: 150px; border-radius: 1rem;" />
@@ -290,14 +302,14 @@
       </ul>
     </div>
 
-    <div class="section" id="ingredientes">
+    <div class="section" id="ingredients">
       <h2>Ingredients</h2>
       <p><strong>Main:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Ham, Cheese</p>
       <p><strong>Extras:</strong> Lettuce, Tomato, Onion, Beans</p>
       <p><strong>Toppings:</strong> Red salsa, Green salsa, Avocado, Cream, Cilantro</p>
     </div>
 
-    <div class="section" id="noticias">
+    <div class="section" id="devnews">
   <h2>🛠️ Development News</h2>
 
   <div style="margin-bottom: 2rem;">
@@ -316,7 +328,7 @@
   </div>
 </div>
 
-    <div class="section" id="equipo">
+    <div class="section" id="team">
       <h2>Team Bio</h2>
       <ul>
         <li>Gem Alvarez Perez</li>
@@ -332,27 +344,37 @@
     </div>
   </div>
 
- <script>
+<script>
   function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("open");
+    const esMenu = document.getElementById("menuLinks-es");
+    const enMenu = document.getElementById("menuLinks-en");
+
+    if (esMenu.classList.contains("open") || enMenu.classList.contains("open")) {
+      esMenu.classList.remove("open");
+      enMenu.classList.remove("open");
+    } else {
+      const active = document.getElementById("lang-es").style.display !== "none" ? esMenu : enMenu;
+      active.classList.add("open");
+    }
   }
 
   function toggleLanguage() {
     const es = document.getElementById("lang-es");
     const en = document.getElementById("lang-en");
 
-    if (es.style.display === "none") {
-      es.style.display = "block";
-      en.style.display = "none";
-    } else {
-      es.style.display = "none";
-      en.style.display = "block";
-    }
+    const menuEs = document.getElementById("menuLinks-es");
+    const menuEn = document.getElementById("menuLinks-en");
 
-    // Close the mobile menu
-    const menu = document.getElementById("menuLinks");
-    menu.classList.remove("open");
+    const isSpanish = es.style.display !== "none";
+
+    es.style.display = isSpanish ? "none" : "block";
+    en.style.display = isSpanish ? "block" : "none";
+
+    menuEs.style.display = isSpanish ? "none" : "flex";
+    menuEn.style.display = isSpanish ? "flex" : "none";
+
+    menuEs.classList.remove("open");
+    menuEn.classList.remove("open");
   }
 </script>
 </body>
