@@ -1,198 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Hideki Garcia Goo</title>
-<link rel="icon" href="iconoo.JPG">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-* {
-  box-sizing: border-box;
-}
-.responsive {
-  max-width: 100%;
-  height: auto;
-}
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-	
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Astral Musteloid Art Collective" />
+  <title>🌠 Mapachillo Space 🌠</title>
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+      background: radial-gradient(circle at top, #2b194f, #1a112d);
+      color: #fefcfb;
+      text-align: center;
+      padding: 2rem;
+    }
+    img.logo {
+      width: 120px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    section {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    a {
+      color: #ffdfef;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
 <body>
+  <img src="mapachillo.png" alt="Mapachillo Logo" class="logo" />
+  <h1>🌠 Mapachillo Space 🌠</h1>
+  <p><em>Astral Musteloid Art Collective</em></p>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
-  <!--  <a href="#experience" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EXPERIENCE</a> -->
-	<a href="#publications" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PUBLICATIONS</a>
-<!--	<a href="https://hideki-gg.com/ebee.html" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">EBEE</a> -->
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT ME</a>
+  <section>
+    <h2>About Us</h2>
+    <p>Displaced Mexican artists and tinkerers drifting through the void 🪐</p>
+  </section>
 
-  </div>
-</div>
+  <section>
+    <h2>Projects</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>🎮 Videogame: <em>dos de milanesa</em></li>
+      <li>⌨️ Keycaps: 🍚❤️🥛</li>
+    </ul>
+  </section>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT ME</a>
-<!--  <a href="#experience" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EXPERIENCE</a> -->
-  <a href="#publications" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PUBLICATIONS</a>
-<!--  <a href="https://hideki-gg.com/ebee.html" target="_blank" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EBEE</a> -->
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT ME</a>
-</div>
+  <section>
+    <h2>Connect with Us</h2>
+    <p>🪐 <a href="https://yourwebsite.com" target="_blank">Website</a></p>
+    <p>💫 <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a></p>
+  </section>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-
-
-
-  <!-- The about Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
-    <h2 class="w3-wide">HIDEKI GARCIA GOO</h2>
-	<img src="comision.JPG" style="width:28%" class="center responsive">
-<!--	<img src="comision.jpg" style="width:20%" class="center"> -->
-    <p class="w3-opacity"><i>PhD Student at the University of Twente</i></p>
-    <p class="w3-justify"> In 2019, I successfully earned my <b>B.S. in Electrical Engineering</b> with a Minor in Computer Science at the University of Texas Rio Grande Valley. During the final years of my degree program, I had the opportunity to join my University's Social Systems laboratory, where I was captivated by how people interact with technology. After spending less than two years in the lab, I realized my passion for exploring the intricacies of human-robot interactions. This led me to pursue a <b> M.A. in Experimental Psychology</b>, where I could delve deeper into the fascinating world of creating and researching robot interactions. Currently, I am happy to be a <b>Ph.D. student at the University of Twente</b> and part of the European project Harmony. Our project is focused on developing a mobile robot to assist healthcare workers in their daily tasks. As a researcher in this project, my main objective is to minimize the negative impact of social errors made by robots in hospital settings. To achieve this, I am designing and customizing the robot's voice (using semantic-free utterances), gestures, micromovements, and color and shape to cater to people's diverse expectations and create a positive and comfortable user experience. Overall, I am passionate about my research and committed to contributing to developing technology that can positively impact society.
- </p>
-
-    <p class="w3-justify">
-I am also interested in researching and discussing social bias, its consequences, and its manifestation across traditional forms of interaction (e.g., face-to-face) and technology-based interaction modalities that have emerged. Especially in the transfer to and reproduction of bias in people's interactions with agentic technologies (e.g., robots) and the capacity of such systems to address, deflect, and/or mitigate them.   </p>
-	  
-	  
-	  
-    <p class="w3-justify">
-	<b>Hobbies:</b> Building and modding mechanical keyboards, playing with my cat (Canelita), watching films, attending concerts, and listening to music.
-    </p>
-  <div class="row">
-  <div class="column">
-    <img src="keeb.jpg" alt="keeb" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="canelita.jpg" alt="canelita" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="keebs.jpg" alt="keebs" style="width:95%" class="center">
-  </div>
-</div>
-
-	
-
-  <!-- The Experience Section
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="hobbies">
-    <h2 class="w3-wide">HOBBIES</h2>
-    <p class="w3-justify"> <b> Social Systems Laboratory:</b> I have assisted in the execution of six experiments - including the set up, IRB approval, 
-	participant recruitment/management, and data collection - on the associations between an agent’s human likeness and people’s aversion to it.
-	I have also assisted in the analysis and publication of one of the experiments (Alvarez Perez, Garcia Goo, Sánchez Ramos, et al., 2020), as 
-	well as the analysis for and writing of a manuscript in-progress on the findings from a collection of four experiments demonstrating the 
-	reproducibility of the uncanny valley phenomenon across populations and with varying exposure to robotic technologies (submission anticipated in 
-	February, 2021).
-	</p>
-	
-	<p class="w3-justify"> <b>Research Led:</b> I have additionally independently proposed and led, with Dr. Strait’s 
-	mentorship, several extensions to her research. In the 2018-2019 academic year, I lead a team of 
-	three lab members in the execution, submission, and demonstration of a year-long design project involving 
-	construction and implementation of a novel robotic platform intended to promote human-robot cooperation through 
-	antisocial cues. The project was a finalist in the Student Design Competition of the 2019 International Conference 
-	on Human-Robot Interaction and invited for a live demonstration at the conference in Daegu, Korea. Furthermore, 
-	last year, I proposed another robotic platform named ebee to help users seeking to change speaking habits (i.e., using words 
-	that could be harmful to vulnerable populations) fulfill their goal. Again, this project is a finalist in the 
-	Student Design Competition 2021 which will take place this March.
-</div>
- -->
-	  
- <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="publications">
-    <h2 class="w3-wide">PUBLICATIONS</h2>
-	 <p class="w3-justify"> <b>H. Garcia Goo</b>, J. Alvarez Perez, & A. Sánchez Ramos: "<a href="https://dl.acm.org/doi/10.1145/3434074.3446952" target="_blank">Using Negative Affect to Reinforce Moral Norms in Casual Speech</a>". <i>Proceedings of the 16th ACM/IEEE International Conference on Human-Robot 
-	Interaction (HRI 2021) </i>
-	</p>
-	
-	<p class="w3-justify"> J. Alvarez Perez, <b>H. Garcia Goo</b>, A. Sánchez Ramos, V. Contreras, & M. Strait: "<a href="https://dl.acm.org/doi/10.1145/3371382.3378312" target="_blank">The Uncanny Valley Manifests Even with Exposure to Robots</a>". <i>Proceedings of the 15th ACM/IEEE International Conference on 
-	Human-Robot Interaction (HRI 2020)</i>
-	</p>
-	
-	<p class="w3-justify"> <b>H. Garcia Goo</b>, J. Alvarez Perez, & V. Contreras: “<a href="https://ieeexplore.ieee.org/document/8673264" target="_blank">An Antisocial Social Robot: Using Negative Affect to Reinforce Cooperation in Human-Robot Interactions</a>”. <i>Proceedings of the 14th ACM/IEEEInternational 
-	Conference on Human-Robot Interaction (HRI 2019)</i>
-	</p>
-</div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide">CONTACT ME</h2>
- <!--   <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p> -->
-      <div class="w3-large w3-center w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Hengelo, Netherlands<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: <a href="mailto:h.garciagoo@utwente.nl">h.garciagoo@utwente.nl</a><br>
-	<!--	<i class="fa fa-linkedin w3-hover-opacity"></i> -->
-
-      </div>
-    </div>  
-<!-- End Page Content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-10 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-<!-- </footer>-->
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
+  <footer>
+    <p>🌌 Mapachillo Space · made with love in the void</p>
+  </footer>
 </body>
 </html>
