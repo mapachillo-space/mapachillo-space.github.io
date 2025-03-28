@@ -147,6 +147,34 @@
     display: flex;
   }
 }
+
+  .character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.character-card {
+  background: #ffeef6;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.character-card img {
+  width: 100%;
+  max-width: 150px;
+  margin: 0 auto 0.5rem;
+  border-radius: 0.75rem;
+}
+
+.character-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #a66695;
+}
   </style>
 </head>
 <body>
@@ -198,16 +226,29 @@
   <h3>Miguel</h3>
   <img src="miggy-piggy-sketch.svg" alt="Dibujo de Miguel el cerdito" style="width: 150px; border-radius: 1rem; margin-bottom: 1rem;" />
   <p><strong>Miguel:</strong> A Miguel le encanta cocinar y descubrir nuevas recetas. Está orgulloso de poder identificar qué le gusta a sus clientes para mantenerlos felices. Disfruta experimentar con ingredientes y sorprenderlos con combinaciones inesperadas y deliciosas. Si hay muchos clientes esperando, se estresa y empieza a moverse más rápido… se pone histérico.</p>
-
-  <h3>Clientes</h3>
-  <ul>
-     <img src="cat-sketch.svg" alt="Gatito cliente Channel" style="width: 120px; margin-top: 0.5rem; border-radius: 0.5rem;" />
-    <li> <strong>Gatitos:</strong> Impacientes. Gritan si tardas, y Miguel no puede escuchar a los demás. Ingrediente favorito: 🐱<br /> </li>
-     <img src="xolo-sketch.svg" alt="Gatito cliente Channel" style="width: 120px; margin-top: 0.5rem; border-radius: 0.5rem;" />
-    <li><strong>Perritos:</strong> Muy emocionados por probar tortas. Si se tarda mucho, cambian de opinión. Ingrediente favorito: 🐾</li>
-    <li><strong>Camaleones:</strong> Se disfrazan, pero los delatan sus ojitos. Si les das el ingrediente especial equivocado, rechazan la orden. Ingrediente favorito: 🦎</li>
-    <li><strong>Mamut:</strong> Amables, pero con memoria perfecta. Si reciben una orden equivocada, no vuelven. Ingrediente favorito: 🐘</li>
-  </ul>
+<h3>Clientes</h3>
+<div class="character-grid">
+  <div class="character-card">
+    <img src="cat-sketch.svg" alt="Gatito cliente Channel" />
+    <strong>Gatitos</strong>
+    <p>Impacientes. Gritan si tardas, y Miguel no puede escuchar a los demás. Ingrediente favorito: 🐱</p>
+  </div>
+  <div class="character-card">
+    <img src="xolo-sketch.svg" alt="Perrito cliente Xolo" />
+    <strong>Perritos</strong>
+    <p>Muy emocionados por probar tortas. Si se tarda mucho, cambian de opinión. Ingrediente favorito: 🐾</p>
+  </div>
+  <div class="character-card">
+    <img src="chameleon-sketch.svg" alt="Camaleón cliente" />
+    <strong>Camaleones</strong>
+    <p>Se disfrazan, pero sus ojos los delatan. Si les das el ingrediente especial equivocado, rechazan la orden. 🦎</p>
+  </div>
+  <div class="character-card">
+    <img src="mammoth-sketch.svg" alt="Mamut cliente" />
+    <strong>Mamut</strong>
+    <p>Amables pero con memoria perfecta. Si reciben una orden equivocada, no regresan. Ingrediente favorito: 🐘</p>
+  </div>
+</div>
 
   <h3>Obstáculos</h3>
   <ul>
@@ -282,14 +323,29 @@
     <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" style="width: 150px; border-radius: 1rem; margin-bottom: 1rem;" />
     <p><strong>Miguel:</strong> Miguel loves cooking and discovering new recipes. He takes pride in figuring out what his customers enjoy and keeping them happy. He enjoys experimenting with ingredients and surprising them with unexpected and delicious combinations. If too many customers are waiting, he gets stressed and starts moving faster… he goes full hysterical mode.</p>
 
-    <h3>Customers</h3>
-    <ul>
-      <img src="cat-sketch.svg" alt="Channel kitten customer" style="width: 120px; margin-top: 0.5rem; border-radius: 0.5rem;" />
-      <li><strong>Kittens (Channel):</strong> They're impatient. If Miguel takes too long, they start yelling at him, making it harder for him to hear other orders. Favorite ingredient: 🐱</li>
-      <li><strong>Puppies (Xolos):</strong> Super excited to try tortas. So excited that if Miguel takes too long, they change their mind and pick a different torta. Favorite ingredient: 🐾</li>
-      <li><strong>Chameleons:</strong> Shy and sometimes disguise themselves as other animals. But their eyes give them away. If their special ingredient is wrong, they reject the food and it goes straight to the trash. Favorite ingredient: 🦎</li>
-      <li><strong>Mammoths:</strong> Kind-hearted but with a flawless memory. If they receive the wrong order, they remember it and never come back. Favorite ingredient: 🐘</li>
-    </ul>
+   <h3>Customers</h3>
+<div class="character-grid">
+  <div class="character-card">
+    <img src="cat-sketch.svg" alt="Channel kitten customer" />
+    <strong>Kittens (Channel)</strong>
+    <p>They're impatient. If Miguel takes too long, they yell, making it harder to hear other orders. Favorite: 🐱</p>
+  </div>
+  <div class="character-card">
+    <img src="xolo-sketch.svg" alt="Xolo puppy customer" />
+    <strong>Puppies (Xolos)</strong>
+    <p>Super excited to try tortas. If Miguel takes too long, they change their mind. Favorite: 🐾</p>
+  </div>
+  <div class="character-card">
+    <img src="chameleon-sketch.svg" alt="Chameleon customer" />
+    <strong>Chameleons</strong>
+    <p>Shy, disguised as other animals. Their eyes give them away. Wrong ingredient = rejected. 🦎</p>
+  </div>
+  <div class="character-card">
+    <img src="mammoth-sketch.svg" alt="Mammoth customer" />
+    <strong>Mammoths</strong>
+    <p>Kind but with a perfect memory. If their order is wrong, they never come back. Favorite: 🐘</p>
+  </div>
+</div>
 
     <h3>Obstacles</h3>
     <ul>
