@@ -79,10 +79,93 @@
       margin: 0.5rem auto;
       max-width: 100%;
     }
+    .top-menu {
+  position: sticky;
+  top: 0;
+  background: #ffeef6;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.menu-links a,
+.menu-links button {
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  background: #fff1ec;
+  border: none;
+  border-radius: 0.8rem;
+  color: #5a3e47;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-links a:hover,
+.menu-links button:hover {
+  background: #ffd9e6;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .menu-links.open {
+    display: flex;
+  }
+}
   </style>
 </head>
 <body>
   <h1>🍞 Dos de Milanesa</h1>
+
+  <nav class="top-menu">
+  <div class="menu-container">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu-links" id="menuLinks">
+      <button onclick="toggleLanguage()">🌐 ES / EN</button>
+      <a href="#historia">📜 Historia</a>
+      <a href="controles"> Controles</a>
+      <a href="#personajes">🎭 Personajes</a>
+      <a href="#ingredientes">🥪 Ingredientes</a>
+      <a href="#noticias">🛠️ Noticias</a>
+      <a href="#equipo">👩‍🚀 Equipo</a>
+    </div>
+  </div>
+</nav>
 
   <div class="lang-toggle">
     <button onclick="toggleLanguage()">🌐 Cambiar idioma / Switch Language</button>
@@ -90,18 +173,18 @@
 
   <!-- Spanish -->
   <div id="lang-es">
-    <div class="section">
+    <div class="section" id="historia">
       <h2>Historia</h2>
       <p>El cerdito Miguel tiene un carrito donde vende tortas, pero sus clientes tienen gustos bastante peculiares. Con el paso del tiempo, su carrito se vuelve cada vez más popular: visita nuevas ciudades, llegan más y más clientes, y Miguel empieza a incorporar nuevas tortas e ingredientes. Ahora, Miguel tiene que atenderlos a todos rápidamente y mantenerlos contentos, mientras trata de no desperdiciar comida y maximizar sus ganancias.</p>
     </div>
 
-    <div class="section">
+    <div class="section" id="controles">
     <h2>Controles</h2>
     <p>Usa la perilla izquierda para desplazarte por los ingredientes y el botón que está debajo para seleccionarlos. Una vez que armes la torta, usa la perilla derecha para moverte por la barra hasta llegar al carril correcto con el cliente adecuado. Luego, usa el rodillo grande que está encima de la perilla y deslízalo hacia arriba para entregar la torta (también puedes tirarla a la basura si lo deslizas hacia abajo). Además, puedes agregar salsas e ingredientes especiales presionando los botones que están encima del rodillo.</p>
   </div>
 
 
-  <div class="section">
+  <div class="section" id="personajes">>
   <h2>Personajes</h2>
 
   <h3>Miguel</h3>
@@ -129,14 +212,14 @@
   </ul>
 </div>
 
-    <div class="section">
+    <div class="section" id="ingredientes">>
     <h2>Ingredientes</h2>
     <p><strong>Base:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Jamón, Queso</p>
     <p><strong>Extras:</strong> Lechuga, Tomate, Cebolla, Frijoles</p>
     <p><strong>Complementos:</strong> Salsa roja, Salsa verde, Aguacate, Crema, Cilantro</p>
   </div>
 
-    <div class="section">
+    <div class="section" id="noticias">>
   <h2>🛠️ Noticias de Desarrollo</h2>
 
   <div style="margin-bottom: 2rem;">
@@ -155,7 +238,7 @@
   </div>
 </div>
 
-    <div class="section">
+    <div class="section" id="equipo">>
     <h2>Bio del Equipo</h2>
     <ul>
       <li>Gem Alvarez Perez</li>
@@ -173,17 +256,17 @@
 
   <!-- English -->
   <div id="lang-en" style="display: none;">
-    <div class="section">
+    <div class="section" id="historia">
       <h2>Story</h2>
       <p>Miguel the piglet runs a torta cart, but his customers have strange tastes...</p>
     </div>
 
-    <div class="section">
+    <div class="section" id="control">
       <h2>Controls</h2>
       <p>Use the left knob to scroll through ingredients, the button below to select them...</p>
     </div>
 
-    <div class="section">
+    <div class="section" id="personajes">
       <h2>Characters</h2>
       <h3>Miguel</h3>
       <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" style="width: 150px; border-radius: 1rem;" />
@@ -211,14 +294,14 @@
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="ingredientes">
       <h2>Ingredients</h2>
       <p><strong>Main:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Ham, Cheese</p>
       <p><strong>Extras:</strong> Lettuce, Tomato, Onion, Beans</p>
       <p><strong>Toppings:</strong> Red salsa, Green salsa, Avocado, Cream, Cilantro</p>
     </div>
 
-    <div class="section">
+    <div class="section" id="noticias">
   <h2>🛠️ Development News</h2>
 
   <div style="margin-bottom: 2rem;">
@@ -237,7 +320,7 @@
   </div>
 </div>
 
-    <div class="section">
+    <div class="section" id="equipo">
       <h2>Team Bio</h2>
       <ul>
         <li>Gem Alvarez Perez</li>
@@ -253,19 +336,28 @@
     </div>
   </div>
 
-  <script>
-    function toggleLanguage() {
-      const es = document.getElementById("lang-es");
-      const en = document.getElementById("lang-en");
+ <script>
+  function toggleMenu() {
+    const menu = document.getElementById("menuLinks");
+    menu.classList.toggle("open");
+  }
 
-      if (es.style.display === "none") {
-        es.style.display = "block";
-        en.style.display = "none";
-      } else {
-        es.style.display = "none";
-        en.style.display = "block";
-      }
+  function toggleLanguage() {
+    const es = document.getElementById("lang-es");
+    const en = document.getElementById("lang-en");
+
+    if (es.style.display === "none") {
+      es.style.display = "block";
+      en.style.display = "none";
+    } else {
+      es.style.display = "none";
+      en.style.display = "block";
     }
-  </script>
+
+    // Close the mobile menu
+    const menu = document.getElementById("menuLinks");
+    menu.classList.remove("open");
+  }
+</script>
 </body>
 </html>
