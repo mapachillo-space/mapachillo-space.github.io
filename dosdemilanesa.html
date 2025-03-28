@@ -1,482 +1,585 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dos de Milanesa</title>
-  <style>
-    body {
-      font-family: 'Comic Neue', sans-serif;
-      background-color: #fff8f1;
-      color: #3b2f2f;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dos de Milanesa</title>
+    <style>
+      body {
+        font-family: 'Comic Neue', sans-serif;
+        background-color: #fff8f1;
+        color: #3b2f2f;
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #e87e80;
-      text-align: center;
-    }
+      h1 {
+        font-size: 2.5rem;
+        color: #e87e80;
+        text-align: center;
+      }
 
-    h2, h3 {
-      color: #a66695;
-      margin-top: 2rem;
-    }
+      h2,
+      h3 {
+        color: #a66695;
+        margin-top: 2rem;
+      }
 
-    p, li {
-      line-height: 1.6;
-    }
+      p,
+      li {
+        line-height: 1.6;
+      }
 
-    ul {
-      padding-left: 1.2rem;
-    }
+      ul {
+        padding-left: 1.2rem;
+      }
 
-    a {
-      color: #e87e80;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      a {
+        color: #e87e80;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-    a:hover {
-      text-decoration: underline;
-    }
+      a:hover {
+        text-decoration: underline;
+      }
 
-    .section {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background-color: #fff1ec;
-      border-radius: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+      .section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: #fff1ec;
+        border-radius: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
 
-    .lang-toggle {
-      display: block;
-      margin: 1rem auto 2rem;
-      text-align: center;
-    }
+      .lang-toggle {
+        display: block;
+        margin: 1rem auto 2rem;
+        text-align: center;
+      }
 
-    button {
-      background-color: #ffe0ea;
-      color: #3b2f2f;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+      button {
+        background-color: #ffe0ea;
+        color: #3b2f2f;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .back-link {
-      display: block;
-      margin-top: 3rem;
-      text-align: center;
-    }
+      .back-link {
+        display: block;
+        margin-top: 3rem;
+        text-align: center;
+      }
 
-    .section img {
-      display: block;
-      margin: 0.5rem auto;
-      max-width: 100%;
-    }
-    .top-menu {
-  position: sticky;
-  top: 0;
-  background: #ffeef6;
-  z-index: 1000;
-  padding: 0.5rem 1rem;
-  border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
-}
+      .section img {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 100%;
+      }
+      .top-menu {
+        position: sticky;
+        top: 0;
+        background: #ffeef6;
+        z-index: 1000;
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+      }
 
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-}
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+      }
 
-.menu-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
+      .menu-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
 
-.menu-links a,
-.menu-links button {
-  font-size: 0.95rem;
-  padding: 0.4rem 0.8rem;
-  background: #fff1ec;
-  border: none;
-  border-radius: 0.8rem;
-  color: #5a3e47;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
+      .menu-links a,
+      .menu-links button {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+        background: #fff1ec;
+        border: none;
+        border-radius: 0.8rem;
+        color: #5a3e47;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
 
-.menu-links a:hover,
-.menu-links button:hover {
-  background: #ffd9e6;
-}
+      .menu-links a:hover,
+      .menu-links button:hover {
+        background: #ffd9e6;
+      }
 
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
+      @media (max-width: 600px) {
+        .menu-toggle {
+          display: block;
+        }
 
-  .menu-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 0.6rem;
-  }
+        .menu-links {
+          display: none;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          gap: 0.6rem;
+        }
 
-  .menu-links.open {
-    display: flex;
-  }
-}
+        .menu-links.open {
+          display: flex;
+        }
+      }
 
-  .character-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
 
-.character-card {
-  background: #ffeef6;
-  border-radius: 1rem;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+      .character-card {
+        background: #ffeef6;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
 
-.character-card img {
-  width: 100%;
-  max-width: 150px;
-  margin: 0 auto 0.5rem;
-  border-radius: 0.75rem;
-}
+      .character-card img {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto 0.5rem;
+        border-radius: 0.75rem;
+      }
 
-.character-card strong {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #a66695;
-}
+      .character-card strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #a66695;
+      }
 
-.dev-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+      .dev-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
 
-.dev-card {
-  background: #fff5f0;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+      .dev-card {
+        background: #fff5f0;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
 
-.dev-card img {
-  width: 100%;
-  border-radius: 0.75rem;
-  margin-bottom: 0.5rem;
-}
+      .dev-card img {
+        width: 100%;
+        border-radius: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
 
-.dev-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-  </style>
-</head>
-<body>
-  <h1>🍞 Dos de Milanesa</h1>
-<nav class="top-menu">
-  <div class="menu-container">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-    <!-- Spanish Menu -->
-    <div class="menu-links" id="menuLinks-es">
-      <button onclick="toggleLanguage()">🌐 ES / EN</button>
-      <a href="#historia">📜 Historia</a>
-      <a href="#controles">🕹️ Controles</a>      
-      <a href="#personajes">🎭 Personajes</a>
-      <a href="#ingredientes">🥪 Ingredientes</a>
-      <a href="#noticias">🛠️ Noticias</a>
-      <a href="#equipo">👩‍🚀 Equipo</a>
+      .dev-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍞 Dos de Milanesa</h1>
+    <nav class="top-menu">
+      <div class="menu-container">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <!-- Spanish Menu -->
+        <div class="menu-links" id="menuLinks-es">
+          <button onclick="toggleLanguage()">🌐 ES / EN</button>
+          <a href="#historia">📜 Historia</a>
+          <a href="#controles">🕹️ Controles</a>
+          <a href="#personajes">🎭 Personajes</a>
+          <a href="#ingredientes">🥪 Ingredientes</a>
+          <a href="#noticias">🛠️ Noticias</a>
+          <a href="#equipo">👩‍🚀 Equipo</a>
+        </div>
+        <!-- English Menu -->
+        <div class="menu-links" id="menuLinks-en" style="display: none">
+          <button onclick="toggleLanguage()">🌐 EN / ES</button>
+          <a href="#story">📜 Story</a>
+          <a href="#controls">🕹️ Controls</a>
+          <a href="#characters">🎭 Characters</a>
+          <a href="#ingredients">🥪 Ingredients</a>
+          <a href="#devnews">🛠️ Dev News</a>
+          <a href="#team">👩‍🚀 Team</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Spanish -->
+    <div id="lang-es">
+      <div class="section" id="historia">
+        <h2>Historia</h2>
+        <p>
+          El cerdito Miguel tiene un carrito donde vende tortas, pero sus
+          clientes tienen gustos bastante peculiares. Con el paso del tiempo, su
+          carrito se vuelve cada vez más popular: visita nuevas ciudades, llegan
+          más y más clientes, y Miguel empieza a incorporar nuevas tortas e
+          ingredientes. Ahora, Miguel tiene que atenderlos a todos rápidamente y
+          mantenerlos contentos, mientras trata de no desperdiciar comida y
+          maximizar sus ganancias.
+        </p>
+      </div>
+      <div class="section" id="controles">
+        <h2>Controles</h2>
+        <p>
+          Usa la perilla izquierda para desplazarte por los ingredientes y el
+          botón que está debajo para seleccionarlos. Una vez que armes la torta,
+          usa la perilla derecha para moverte por la barra hasta llegar al
+          carril correcto con el cliente adecuado. Luego, usa el rodillo grande
+          que está encima de la perilla y deslízalo hacia arriba para entregar
+          la torta (también puedes tirarla a la basura si lo deslizas hacia
+          abajo). Además, puedes agregar salsas e ingredientes especiales
+          presionando los botones que están encima del rodillo.
+        </p>
+      </div>
+      <div class="section" id="personajes">
+        <h2>Personajes</h2>
+        <h3>Miguel</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img
+              src="miggy-piggy-sketch.svg"
+              alt="Dibujo de Miguel el cerdito"
+            />
+            <strong>Miguel</strong>
+            <p>
+              A Miguel le encanta cocinar y descubrir nuevas recetas. Está
+              orgulloso de poder identificar qué le gusta a sus clientes para
+              mantenerlos felices. Disfruta experimentar con ingredientes y
+              sorprenderlos con combinaciones inesperadas y deliciosas. Si hay
+              muchos clientes esperando, se estresa y empieza a moverse más
+              rápido… se pone histérico.
+            </p>
+          </div>
+        </div>
+        <h3>Clientes</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="cat-sketch.svg" alt="Gatito cliente Channel" />
+            <strong>Gatitos</strong>
+            <p>
+              Impacientes. Gritan si tardas, y Miguel no puede escuchar a los
+              demás. Ingrediente favorito: 🐱
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="xolo-sketch.svg" alt="Perrito cliente Xolo" />
+            <strong>Perritos</strong>
+            <p>
+              Muy emocionados por probar tortas. Si se tarda mucho, cambian de
+              opinión. Ingrediente favorito: 🐾
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="chameleon-sketch.svg" alt="Camaleón cliente" />
+            <strong>Camaleones</strong>
+            <p>
+              Se disfrazan, pero sus ojos los delatan. Si les das el ingrediente
+              especial equivocado, rechazan la orden. 🦎
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="mammoth-sketch.svg" alt="Mamut cliente" />
+            <strong>Mamut</strong>
+            <p>
+              Amables pero con memoria perfecta. Si reciben una orden
+              equivocada, no regresan. Ingrediente favorito: 🐘
+            </p>
+          </div>
+        </div>
+        <h3>Obstáculos</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="tlacuache-sketch.svg" alt="Tlacuache" />
+            <strong>Tlacuaches</strong>
+            <p>
+              Obstáculo que aparece en la barra y roba ingredientes. Si la torta
+              tiene el ingrediente favorito del cliente, se espanta.
+            </p>
+          </div>
+        </div>
+        <h3>Otros Personajes</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="contador-sketch.svg" alt="Contador" />
+            <strong>Contador</strong>
+            <p>
+              Al final de la partida, presenta las ganancias y estadísticas.
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="vendor-sketch.svg" alt="Vendedor de ingredientes" />
+            <strong>Vendedor</strong>
+            <p>Provee ingredientes nuevos para mejorar el carrito.</p>
+          </div>
+        </div>
+        <div class="section" id="ingredientes">
+          <h2>Ingredientes</h2>
+          <p>
+            <strong>Base:</strong> Cochinita, Milanesa, Tamal, Chilaquiles,
+            Jamón, Queso
+          </p>
+          <p><strong>Extras:</strong> Lechuga, Tomate, Cebolla, Frijoles</p>
+          <p>
+            <strong>Complementos:</strong> Salsa roja, Salsa verde, Aguacate,
+            Crema, Cilantro
+          </p>
+        </div>
+        <div class="section" id="noticias">
+          <h2>🛠️ Noticias de Desarrollo</h2>
+          <div class="dev-grid">
+            <div class="dev-card">
+              <img src="draft1.png" alt="Boceto inicial" />
+              <p>
+                <strong>01 marzo 2025</strong> — Primer boceto visual del
+                concepto del juego. Incluye ideas iniciales de personajes,
+                sistema de puntaje y propuestas para las habilidades especiales
+                de cada uno.
+              </p>
+            </div>
+            <div class="dev-card">
+              <img src="demo1.gif" alt="Mini demo animada" />
+              <p>
+                <strong>01 marzo 2025</strong> — Diseño del esquema de hardware
+                para el control del videojuego: perillas, rodillo y botones
+                dedicados a ingredientes especiales. Este concepto está
+                inspirado en los controles clásicos de juegos arcade.
+              </p>
+            </div>
+            <div class="dev-card">
+              <img src="demo-1.gif" alt="Miguel en el demo" />
+              <p>
+                <strong>03 de marzo de 2025</strong> — Diseño de Miguel, el
+                personaje principal del juego, e integración inicial en el
+                entorno del demo. Actualmente, Miguel puede ser controlado por
+                el jugador y moverse de lado a lado dentro del escenario.
+              </p>
+            </div>
+          </div>
+          <div class="back-link">
+            <a href="index.html">← Regresar a Mapachillo Space</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- English -->
+    <div id="lang-en" style="display: none">
+      <div class="section" id="story">
+        <h2>Story</h2>
+        <p>
+          Miguel the piglet runs a torta cart, but his customers have very
+          particular tastes. Over time, his cart becomes increasingly popular:
+          he visits new cities, more and more customers arrive, and Miguel
+          begins to incorporate new tortas and ingredients. Now, Miguel must
+          serve everyone quickly and keep them happy, while avoiding food waste
+          and maximizing profits.
+        </p>
+      </div>
+      <div class="section" id="controls">
+        <h2>Controls</h2>
+        <p>
+          Use the left knob to scroll through the ingredients and the button
+          below it to select them. Once the torta is assembled, use the right
+          knob to move along the bar and reach the right customer lane. Then,
+          use the big roller above the knob and slide it up to deliver the torta
+          (or down to throw it away). You can also add salsas and special
+          ingredients by pressing the buttons above the roller.
+        </p>
+      </div>
+      <div class="section" id="characters">
+        <h2>Characters</h2>
+        <h3>Miguel</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" />
+            <strong>Miguel</strong>
+            <p>
+              Miguel loves cooking and discovering new recipes. He takes pride
+              in figuring out what his customers enjoy and keeping them happy.
+              He enjoys experimenting with ingredients and surprising them with
+              unexpected and delicious combinations. If too many customers are
+              waiting, he gets stressed and starts moving faster… he goes full
+              hysterical mode.
+            </p>
+          </div>
+        </div>
+        <h3>Customers</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="cat-sketch.svg" alt="Channel kitten customer" />
+            <strong>Kittens (Channel)</strong>
+            <p>
+              They're impatient. If Miguel takes too long, they yell, making it
+              harder to hear other orders. Favorite: 🐱
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="xolo-sketch.svg" alt="Xolo puppy customer" />
+            <strong>Puppies (Xolos)</strong>
+            <p>
+              Super excited to try tortas. If Miguel takes too long, they change
+              their mind. Favorite: 🐾
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="chameleon-sketch.svg" alt="Chameleon customer" />
+            <strong>Chameleons</strong>
+            <p>
+              Shy, disguised as other animals. Their eyes give them away. Wrong
+              ingredient = rejected. 🦎
+            </p>
+          </div>
+          <div class="character-card">
+            <img src="mammoth-sketch.svg" alt="Mammoth customer" />
+            <strong>Mammoths</strong>
+            <p>
+              Kind but with a perfect memory. If their order is wrong, they
+              never come back. Favorite: 🐘
+            </p>
+          </div>
+        </div>
+        <h3>Obstacles</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="tlacuache-sketch.svg" alt="Opossum" />
+            <strong>Opossums</strong>
+            <p>
+              They appear on the bar and try to steal ingredients. But if the
+              torta has the customer’s favorite ingredient, it scares them away.
+            </p>
+          </div>
+        </div>
+        <h3>Other Characters</h3>
+        <div class="character-grid">
+          <div class="character-card">
+            <img src="contador-sketch.svg" alt="Accountant" />
+            <strong>Accountant</strong>
+            <p>At the end of the game, shows your earnings and round stats.</p>
+          </div>
+          <div class="character-card">
+            <img src="vendor-sketch.svg" alt="Ingredient Vendor" />
+            <strong>Ingredient Vendor</strong>
+            <p>Provides new ingredients to improve your cart.</p>
+          </div>
+        </div>
+        <div class="section" id="ingredients">
+          <h2>Ingredients</h2>
+          <p>
+            <strong>Main:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Ham,
+            Cheese
+          </p>
+          <p><strong>Extras:</strong> Lettuce, Tomato, Onion, Beans</p>
+          <p>
+            <strong>Toppings:</strong> Red salsa, Green salsa, Avocado, Cream,
+            Cilantro
+          </p>
+        </div>
+        <div class="section" id="devnews">
+          <h2>🛠️ Development News</h2>
+          <div class="dev-grid">
+            <div class="dev-card">
+              <img src="draft1.png" alt="Initial sketch" />
+              <p>
+                <strong>March 1, 2025</strong> — First visual sketch of the game
+                concept. It includes early ideas for characters, the scoring
+                system, and proposed special abilities for each character.
+              </p>
+            </div>
+            <div class="dev-card">
+              <img src="demo1.gif" alt="Hardware demo sketch" />
+              <p>
+                <strong>March 1, 2025</strong> — Hardware schematic design for
+                the game controls: knobs, roller, and dedicated special
+                ingredient buttons. Inspired by classic arcade game setups.
+              </p>
+            </div>
+            <div class="dev-card">
+              <img src="demo-1.gif" alt="Miguel demo integration" />
+              <p>
+                <strong>March 3, 2025</strong> — Design of Miguel, the main
+                character, and initial integration into the game demo. Miguel
+                can now be controlled by the player and moves side to side
+                across the screen.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="team">
+          <h2>Team Bio</h2>
+          <ul>
+            <li>Gem Alvarez Perez</li>
+            <li>Adriana Rubio Segura</li>
+            <li>Arturo de la Cruz</li>
+            <li>Felipe</li>
+            <li>Hideki Garcia Goo</li>
+          </ul>
+        </div>
+        <div class="back-link">
+          <a href="index.html">← Back to Mapachillo Space</a>
+        </div>
+      </div>
     </div>
 
-    <!-- English Menu -->
-    <div class="menu-links" id="menuLinks-en" style="display: none;">
-      <button onclick="toggleLanguage()">🌐 EN / ES</button>
-      <a href="#story">📜 Story</a>
-      <a href="#controls">🕹️ Controls</a>
-      <a href="#characters">🎭 Characters</a>
-      <a href="#ingredients">🥪 Ingredients</a>
-      <a href="#devnews">🛠️ Dev News</a>
-      <a href="#team">👩‍🚀 Team</a>
-    </div>
-  </div>
-</nav>
+    <script>
+      function toggleMenu() {
+        const esVisible =
+          document.getElementById('lang-es').style.display !== 'none';
+        const menu = esVisible
+          ? document.getElementById('menuLinks-es')
+          : document.getElementById('menuLinks-en');
 
-  <!-- Spanish -->
-  <div id="lang-es">
-    <div class="section" id="historia">
-      <h2>Historia</h2>
-      <p>El cerdito Miguel tiene un carrito donde vende tortas, pero sus clientes tienen gustos bastante peculiares. Con el paso del tiempo, su carrito se vuelve cada vez más popular: visita nuevas ciudades, llegan más y más clientes, y Miguel empieza a incorporar nuevas tortas e ingredientes. Ahora, Miguel tiene que atenderlos a todos rápidamente y mantenerlos contentos, mientras trata de no desperdiciar comida y maximizar sus ganancias.</p>
-    </div>
+        menu.classList.toggle('open');
+      }
 
-    <div class="section" id="controles">
-    <h2>Controles</h2>
-    <p>Usa la perilla izquierda para desplazarte por los ingredientes y el botón que está debajo para seleccionarlos. Una vez que armes la torta, usa la perilla derecha para moverte por la barra hasta llegar al carril correcto con el cliente adecuado. Luego, usa el rodillo grande que está encima de la perilla y deslízalo hacia arriba para entregar la torta (también puedes tirarla a la basura si lo deslizas hacia abajo). Además, puedes agregar salsas e ingredientes especiales presionando los botones que están encima del rodillo.</p>
-  </div>
+      function toggleLanguage() {
+        const es = document.getElementById('lang-es');
+        const en = document.getElementById('lang-en');
 
+        const menuEs = document.getElementById('menuLinks-es');
+        const menuEn = document.getElementById('menuLinks-en');
 
-  <div class="section" id="personajes">
-  <h2>Personajes</h2>
+        const isSpanish = es.style.display !== 'none';
 
- <h3>Miguel</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="miggy-piggy-sketch.svg" alt="Dibujo de Miguel el cerdito" />
-    <strong>Miguel</strong>
-    <p>A Miguel le encanta cocinar y descubrir nuevas recetas. Está orgulloso de poder identificar qué le gusta a sus clientes para mantenerlos felices. Disfruta experimentar con ingredientes y sorprenderlos con combinaciones inesperadas y deliciosas. Si hay muchos clientes esperando, se estresa y empieza a moverse más rápido… se pone histérico.</p>
-  </div>
-</div>
-    
-    <h3>Clientes</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="cat-sketch.svg" alt="Gatito cliente Channel" />
-    <strong>Gatitos</strong>
-    <p>Impacientes. Gritan si tardas, y Miguel no puede escuchar a los demás. Ingrediente favorito: 🐱</p>
-  </div>
-  <div class="character-card">
-    <img src="xolo-sketch.svg" alt="Perrito cliente Xolo" />
-    <strong>Perritos</strong>
-    <p>Muy emocionados por probar tortas. Si se tarda mucho, cambian de opinión. Ingrediente favorito: 🐾</p>
-  </div>
-  <div class="character-card">
-    <img src="chameleon-sketch.svg" alt="Camaleón cliente" />
-    <strong>Camaleones</strong>
-    <p>Se disfrazan, pero sus ojos los delatan. Si les das el ingrediente especial equivocado, rechazan la orden. 🦎</p>
-  </div>
-  <div class="character-card">
-    <img src="mammoth-sketch.svg" alt="Mamut cliente" />
-    <strong>Mamut</strong>
-    <p>Amables pero con memoria perfecta. Si reciben una orden equivocada, no regresan. Ingrediente favorito: 🐘</p>
-  </div>
-</div>
+        // Toggle content visibility
+        es.style.display = isSpanish ? 'none' : 'block';
+        en.style.display = isSpanish ? 'block' : 'none';
 
-<h3>Obstáculos</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="tlacuache-sketch.svg" alt="Tlacuache" />
-    <strong>Tlacuaches</strong>
-    <p>Obstáculo que aparece en la barra y roba ingredientes. Si la torta tiene el ingrediente favorito del cliente, se espanta.</p>
-  </div>
-</div>
+        // Toggle menu visibility
+        menuEs.style.display = isSpanish ? 'none' : 'flex';
+        menuEn.style.display = isSpanish ? 'flex' : 'none';
 
- <h3>Otros Personajes</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="contador-sketch.svg" alt="Contador" />
-    <strong>Contador</strong>
-    <p>Al final de la partida, presenta las ganancias y estadísticas.</p>
-  </div>
-  <div class="character-card">
-    <img src="vendor-sketch.svg" alt="Vendedor de ingredientes" />
-    <strong>Vendedor</strong>
-    <p>Provee ingredientes nuevos para mejorar el carrito.</p>
-  </div>
-</div>
+        // Close any open menus
+        menuEs.classList.remove('open');
+        menuEn.classList.remove('open');
 
-    <div class="section" id="ingredientes">
-    <h2>Ingredientes</h2>
-    <p><strong>Base:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Jamón, Queso</p>
-    <p><strong>Extras:</strong> Lechuga, Tomate, Cebolla, Frijoles</p>
-    <p><strong>Complementos:</strong> Salsa roja, Salsa verde, Aguacate, Crema, Cilantro</p>
-  </div>
-
-    <div class="section" id="noticias">
- <h2>🛠️ Noticias de Desarrollo</h2>
-<div class="dev-grid">
-  <div class="dev-card">
-    <img src="draft1.png" alt="Boceto inicial" />
-    <p><strong>01 marzo 2025</strong> — Primer boceto visual del concepto del juego. Incluye ideas iniciales de personajes, sistema de puntaje y propuestas para las habilidades especiales de cada uno.</p>
-  </div>
-  <div class="dev-card">
-    <img src="demo1.gif" alt="Mini demo animada" />
-    <p><strong>01 marzo 2025</strong> — Diseño del esquema de hardware para el control del videojuego: perillas, rodillo y botones dedicados a ingredientes especiales. Este concepto está inspirado en los controles clásicos de juegos arcade.</p>
-  </div>
-  <div class="dev-card">
-    <img src="demo-1.gif" alt="Miguel en el demo" />
-    <p><strong>03 de marzo de 2025</strong> — Diseño de Miguel, el personaje principal del juego, e integración inicial en el entorno del demo. Actualmente, Miguel puede ser controlado por el jugador y moverse de lado a lado dentro del escenario.</p>
-  </div>
-</div>
-
-    <div class="back-link">
-      <a href="index.html">← Regresar a Mapachillo Space</a>
-    </div>
-  </div>
-
-  <!-- English -->
-<div id="lang-en" style="display: none;">
-  <div class="section" id="story">
-    <h2>Story</h2>
-    <p>Miguel the piglet runs a torta cart, but his customers have very particular tastes. Over time, his cart becomes increasingly popular: he visits new cities, more and more customers arrive, and Miguel begins to incorporate new tortas and ingredients. Now, Miguel must serve everyone quickly and keep them happy, while avoiding food waste and maximizing profits.</p>
-  </div>
-
-  <div class="section" id="controls">
-    <h2>Controls</h2>
-    <p>Use the left knob to scroll through the ingredients and the button below it to select them. Once the torta is assembled, use the right knob to move along the bar and reach the right customer lane. Then, use the big roller above the knob and slide it up to deliver the torta (or down to throw it away). You can also add salsas and special ingredients by pressing the buttons above the roller.</p>
-  </div>
-
-  <div class="section" id="characters">
-    <h2>Characters</h2>
-
-   <h3>Miguel</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="miggy-piggy-sketch.svg" alt="Miguel the pig" />
-    <strong>Miguel</strong>
-    <p>Miguel loves cooking and discovering new recipes. He takes pride in figuring out what his customers enjoy and keeping them happy. He enjoys experimenting with ingredients and surprising them with unexpected and delicious combinations. If too many customers are waiting, he gets stressed and starts moving faster… he goes full hysterical mode.</p>
-  </div>
-</div>
-    
-   <h3>Customers</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="cat-sketch.svg" alt="Channel kitten customer" />
-    <strong>Kittens (Channel)</strong>
-    <p>They're impatient. If Miguel takes too long, they yell, making it harder to hear other orders. Favorite: 🐱</p>
-  </div>
-  <div class="character-card">
-    <img src="xolo-sketch.svg" alt="Xolo puppy customer" />
-    <strong>Puppies (Xolos)</strong>
-    <p>Super excited to try tortas. If Miguel takes too long, they change their mind. Favorite: 🐾</p>
-  </div>
-  <div class="character-card">
-    <img src="chameleon-sketch.svg" alt="Chameleon customer" />
-    <strong>Chameleons</strong>
-    <p>Shy, disguised as other animals. Their eyes give them away. Wrong ingredient = rejected. 🦎</p>
-  </div>
-  <div class="character-card">
-    <img src="mammoth-sketch.svg" alt="Mammoth customer" />
-    <strong>Mammoths</strong>
-    <p>Kind but with a perfect memory. If their order is wrong, they never come back. Favorite: 🐘</p>
-  </div>
-</div>
-
-    <h3>Obstacles</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="tlacuache-sketch.svg" alt="Opossum" />
-    <strong>Opossums</strong>
-    <p>They appear on the bar and try to steal ingredients. But if the torta has the customer’s favorite ingredient, it scares them away.</p>
-  </div>
-</div>
-
-   <h3>Other Characters</h3>
-<div class="character-grid">
-  <div class="character-card">
-    <img src="contador-sketch.svg" alt="Accountant" />
-    <strong>Accountant</strong>
-    <p>At the end of the game, shows your earnings and round stats.</p>
-  </div>
-  <div class="character-card">
-    <img src="vendor-sketch.svg" alt="Ingredient Vendor" />
-    <strong>Ingredient Vendor</strong>
-    <p>Provides new ingredients to improve your cart.</p>
-  </div>
-</div>
-
-  <div class="section" id="ingredients">
-    <h2>Ingredients</h2>
-    <p><strong>Main:</strong> Cochinita, Milanesa, Tamal, Chilaquiles, Ham, Cheese</p>
-    <p><strong>Extras:</strong> Lettuce, Tomato, Onion, Beans</p>
-    <p><strong>Toppings:</strong> Red salsa, Green salsa, Avocado, Cream, Cilantro</p>
-  </div>
-
- <div class="section" id="devnews">
-  <h2>🛠️ Development News</h2>
-  <div class="dev-grid">
-    <div class="dev-card">
-      <img src="draft1.png" alt="Initial sketch" />
-      <p><strong>March 1, 2025</strong> — First visual sketch of the game concept. It includes early ideas for characters, the scoring system, and proposed special abilities for each character.</p>
-    </div>
-    <div class="dev-card">
-      <img src="demo1.gif" alt="Hardware demo sketch" />
-      <p><strong>March 1, 2025</strong> — Hardware schematic design for the game controls: knobs, roller, and dedicated special ingredient buttons. Inspired by classic arcade game setups.</p>
-    </div>
-    <div class="dev-card">
-      <img src="demo-1.gif" alt="Miguel demo integration" />
-      <p><strong>March 3, 2025</strong> — Design of Miguel, the main character, and initial integration into the game demo. Miguel can now be controlled by the player and moves side to side across the screen.</p>
-    </div>
-  </div>
-</div>
-
-  <div class="section" id="team">
-    <h2>Team Bio</h2>
-    <ul>
-      <li>Gem Alvarez Perez</li>
-      <li>Adriana Rubio Segura</li>
-      <li>Arturo de la Cruz</li>
-      <li>Felipe</li>
-      <li>Hideki Garcia Goo</li>
-    </ul>
-  </div>
-
-  <div class="back-link">
-    <a href="index.html">← Back to Mapachillo Space</a>
-  </div>
-</div>
-<script>
-  function toggleMenu() {
-    const esVisible = document.getElementById("lang-es").style.display !== "none";
-    const menu = esVisible
-      ? document.getElementById("menuLinks-es")
-      : document.getElementById("menuLinks-en");
-
-    menu.classList.toggle("open");
-  }
-
-  function toggleLanguage() {
-    const es = document.getElementById("lang-es");
-    const en = document.getElementById("lang-en");
-
-    const menuEs = document.getElementById("menuLinks-es");
-    const menuEn = document.getElementById("menuLinks-en");
-
-    const isSpanish = es.style.display !== "none";
-
-    // Toggle content visibility
-    es.style.display = isSpanish ? "none" : "block";
-    en.style.display = isSpanish ? "block" : "none";
-
-    // Toggle menu visibility
-    menuEs.style.display = isSpanish ? "none" : "flex";
-    menuEn.style.display = isSpanish ? "flex" : "none";
-
-    // Close any open menus
-    menuEs.classList.remove("open");
-    menuEn.classList.remove("open");
-
-    // Optional: Scroll to top when switching language
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-</script>
-</body>
+        // Optional: Scroll to top when switching language
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
+  </body>
 </html>
