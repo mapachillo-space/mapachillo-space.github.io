@@ -343,8 +343,16 @@
     <a href="index.html">← Back to Mapachillo Space</a>
   </div>
 </div>
-
 <script>
+  function toggleMenu() {
+    const esVisible = document.getElementById("lang-es").style.display !== "none";
+    const menu = esVisible
+      ? document.getElementById("menuLinks-es")
+      : document.getElementById("menuLinks-en");
+
+    menu.classList.toggle("open");
+  }
+
   function toggleLanguage() {
     const es = document.getElementById("lang-es");
     const en = document.getElementById("lang-en");
@@ -358,13 +366,16 @@
     es.style.display = isSpanish ? "none" : "block";
     en.style.display = isSpanish ? "block" : "none";
 
-    // Toggle nav menu visibility
+    // Toggle menu visibility
     menuEs.style.display = isSpanish ? "none" : "flex";
     menuEn.style.display = isSpanish ? "flex" : "none";
 
-    // ✅ Close both mobile menus if any were open
+    // Close any open menus
     menuEs.classList.remove("open");
     menuEn.classList.remove("open");
+
+    // Optional: Scroll to top when switching language
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
 </body>
