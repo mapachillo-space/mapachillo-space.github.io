@@ -206,14 +206,14 @@
   scroll-snap-align: start;
 }
 
-      /* Existing carousel styles */
-.carousel-container {
+     .carousel-container {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   gap: 1rem;
-  padding-bottom: 1rem;
-  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+  margin: 0 -1rem; /* pulls edge padding in mobile */
 }
 
 .carousel-track {
@@ -221,6 +221,9 @@
   gap: 1rem;
   flex-wrap: nowrap;
   scroll-snap-type: x mandatory;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 .dev-card {
@@ -229,47 +232,44 @@
   background: #fff5f0;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .dev-card img {
   width: 100%;
   height: auto;
+  object-fit: contain;
   border-radius: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-/* Mobile-friendly adjustments */
+.dev-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Mobile-specific tweaks */
 @media (max-width: 600px) {
   .carousel-container {
+    margin: 0; /* avoid cutting edges */
+    padding-bottom: 1rem;
+  }
+
+  .carousel-track {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   .dev-card {
-    flex: 0 0 90vw;
-    box-sizing: border-box;
-    max-height: none; /* ensure it's not restricted */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .dev-card img {
-    height: auto;
-    max-height: 45vw; /* limit image height so text fits */
-    object-fit: contain;
+    flex: 0 0 85vw;
+    max-width: 85vw;
   }
 
   .dev-card p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    overflow-wrap: break-word;
-    margin: 0.5rem 0 0;
-    flex-grow: 1;
+    font-size: 0.9rem;
   }
 }
     </style>
