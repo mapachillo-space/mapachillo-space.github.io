@@ -249,12 +249,27 @@
   }
 
   .dev-card {
-    flex: 0 0 85vw;
-    box-sizing: border-box; /* important to avoid overflow */
+    flex: 0 0 90vw;
+    box-sizing: border-box;
+    max-height: none; /* ensure it's not restricted */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .dev-card img {
+    height: auto;
+    max-height: 45vw; /* limit image height so text fits */
+    object-fit: contain;
   }
 
   .dev-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    margin: 0.5rem 0 0;
+    flex-grow: 1;
   }
 }
     </style>
