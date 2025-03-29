@@ -670,29 +670,29 @@
       }
 
       function toggleLanguage() {
-        const es = document.getElementById('lang-es');
-        const en = document.getElementById('lang-en');
+  const es = document.getElementById('lang-es');
+  const en = document.getElementById('lang-en');
 
-        const menuEs = document.getElementById('menuLinks-es');
-        const menuEn = document.getElementById('menuLinks-en');
+  const menuEs = document.getElementById('menuLinks-es');
+  const menuEn = document.getElementById('menuLinks-en');
 
-        const isSpanish = es.style.display !== 'none';
+  const isSpanish = es.style.display !== 'none';
 
-        // Toggle content visibility
-        es.style.display = isSpanish ? 'none' : 'block';
-        en.style.display = isSpanish ? 'block' : 'none';
+  // Close any open menus BEFORE toggling visibility
+  menuEs.classList.remove('open');
+  menuEn.classList.remove('open');
 
-        // Toggle menu visibility
-        menuEs.style.display = isSpanish ? 'none' : 'flex';
-        menuEn.style.display = isSpanish ? 'flex' : 'none';
+  // Toggle content visibility
+  es.style.display = isSpanish ? 'none' : 'block';
+  en.style.display = isSpanish ? 'block' : 'none';
 
-        // Close any open menus
-        menuEs.classList.remove('open');
-        menuEn.classList.remove('open');
+  // Toggle menu visibility
+  menuEs.style.display = isSpanish ? 'none' : 'flex';
+  menuEn.style.display = isSpanish ? 'flex' : 'none';
 
-        // Optional: Scroll to top when switching language
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+  // Optional: Scroll to top when switching language
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
     </script>
   </body>
 </html>
