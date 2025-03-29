@@ -275,6 +275,13 @@
     font-size: 0.9rem;
   }
 }
+
+      .section:target::before {
+  content: '';
+  display: block;
+  height: 80px; /* height of the sticky menu */
+  margin-top: -80px;
+}
     </style>
   </head>
   <body>
