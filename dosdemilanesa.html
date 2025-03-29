@@ -201,6 +201,27 @@
         font-size: 0.95rem;
         line-height: 1.5;
       }
+
+      .carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.dev-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
     </style>
   </head>
   <body>
