@@ -243,8 +243,14 @@
 
 /* Mobile-friendly adjustments */
 @media (max-width: 600px) {
+  .carousel-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .dev-card {
-    flex: 0 0 85vw; /* adapt to screen size */
+    flex: 0 0 85vw;
+    box-sizing: border-box; /* important to avoid overflow */
   }
 
   .dev-card p {
