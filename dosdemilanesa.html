@@ -3,16 +3,132 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Dos de Milanesa</title>
   <style>
-    html,
-    body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      box-sizing: border-box;
-    }
+
+    /* Base Sticky Behavior Fix */
+html {
+  scroll-padding-top: 80px; /* Space for sticky header */
+}
+
+body {
+  position: relative;
+  padding-top: 0;
+}
+
+.top-menu {
+  position: sticky;
+  top: 0;
+  background: #cfa3b8;
+  z-index: 1000;
+  min-height: 60px; /* Ensure consistent height */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Fix menu toggle positioning */
+.menu-toggle {
+  position: absolute;
+  top: 1rem; /* Match top-menu padding */
+  left: 1rem;
+  z-index: 1001;
+  background: #cfa3b8; /* Match menu background */
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+/* Ensure mobile menu appears below properly */
+@media (max-width: 600px) {
+  .menu-links {
+    top: 60px; /* Match min-height of top-menu */
+    padding-top: 1rem;
+  }
+}
+
+.menu-container {
+  padding-top: 40px; /* Space for sticky header */
+  padding-left: 60px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu-links-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.menu-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding-top: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-links a,
+.menu-links button {
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  background: #fff1ec;
+  border: none;
+  border-radius: 0.8rem;
+  color: #5a3e47;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.language-toggle {
+  order: -1;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 1rem;
+    background: #cfa3b8;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 90%;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .menu-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-links a,
+  .menu-links button {
+    width: 80%;
+    text-align: left;
+    padding: 0.8rem 1rem;
+  }
+
+}
 
     body {
       font-family: 'Comic Neue', sans-serif;
@@ -62,12 +178,6 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .lang-toggle {
-      display: block;
-      margin: 1rem auto 2rem;
-      text-align: center;
-    }
-
     button {
       background-color: #ffe0ea;
       color: #3b2f2f;
@@ -89,75 +199,6 @@
       display: block;
       margin: 0.5rem auto;
       max-width: 100%;
-    }
-
-    .top-menu {
-      position: sticky;
-      top: 0;
-      background: #ffeef6;
-      z-index: 1000;
-      padding: 0.5rem 1rem;
-      border-radius: 0 0 1rem 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2rem;
-    }
-
-    .menu-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      cursor: pointer;
-    }
-
-    .menu-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .menu-links a,
-    .menu-links button {
-      font-size: 0.95rem;
-      padding: 0.4rem 0.8rem;
-      background: #fff1ec;
-      border: none;
-      border-radius: 0.8rem;
-      color: #5a3e47;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .menu-links a:hover,
-    .menu-links button:hover {
-      background: #ffd9e6;
-    }
-
-    @media (max-width: 600px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .menu-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 0.6rem;
-      }
-
-      .menu-links.open {
-        display: flex;
-      }
     }
 
     .character-grid {
@@ -253,11 +294,12 @@
 <body>
   <h1>🍞 Dos de Milanesa</h1>
   <nav class="top-menu">
-    <div class="menu-container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <div class="menu-container">
+    <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <div class="menu-links-wrapper">
       <!-- Spanish Menu -->
       <div class="menu-links" id="menuLinks-es">
-        <button onclick="toggleLanguage()">🌐 ES / EN</button>
+        <button class="language-toggle" onclick="toggleLanguage()">🌐 ES / EN</button>
         <a href="#historia">📜 Historia</a>
         <a href="#controles">🕹️ Controles</a>
         <a href="#personajes">🎭 Personajes</a>
@@ -267,7 +309,7 @@
       </div>
       <!-- English Menu -->
       <div class="menu-links" id="menuLinks-en" style="display: none">
-        <button onclick="toggleLanguage()">🌐 EN / ES</button>
+        <button class="language-toggle" onclick="toggleLanguage()">🌐 EN / ES</button>
         <a href="#story">📜 Story</a>
         <a href="#controls">🕹️ Controls</a>
         <a href="#characters">🎭 Characters</a>
@@ -276,7 +318,8 @@
         <a href="#team">👩‍🚀 Team</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
   <!-- Spanish -->
   <div id="lang-es">
     <div class="section" id="historia">
@@ -632,40 +675,94 @@
   </div>
 
   <script>
-    function toggleMenu() {
-      const esVisible =
-        document.getElementById('lang-es').style.display !== 'none';
-      const menu = esVisible
-        ? document.getElementById('menuLinks-es')
-        : document.getElementById('menuLinks-en');
+    let currentLanguage = 'es';
+let menuState = {
+  isOpen: false,
+  toggleElement: null,
+  esMenu: null,
+  enMenu: null
+};
 
-      menu.classList.toggle('open');
-    }
 
-    function toggleLanguage() {
-      const es = document.getElementById('lang-es');
-      const en = document.getElementById('lang-en');
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize elements
+  menuState.toggleElement = document.querySelector('.menu-toggle');
+  menuState.esMenu = document.getElementById('menuLinks-es');
+  menuState.enMenu = document.getElementById('menuLinks-en');
 
-      const menuEs = document.getElementById('menuLinks-es');
-      const menuEn = document.getElementById('menuLinks-en');
+  // Set initial states
+  menuState.esMenu.style.display = 'flex';
+  menuState.enMenu.style.display = 'none';
+  document.getElementById('lang-es').style.display = 'block';
+  document.getElementById('lang-en').style.display = 'none';
+  // Calculate and set proper top spacing
+  const menuHeight = document.querySelector('.top-menu').offsetHeight;
+  document.documentElement.style.setProperty('--menu-height', `${menuHeight}px`);
 
-      const isSpanish = es.style.display !== 'none';
+  // Adjust first section padding
+  const firstSection = document.querySelector('.section');
+  if (firstSection) {
+    firstSection.style.paddingTop = `calc(var(--menu-height) + 20px)`;
+    firstSection.style.marginTop = `calc(var(--menu-height) * -1)`;
+  }
+});
 
-      // Close any open menus BEFORE toggling visibility
-      menuEs.classList.remove('open');
-      menuEn.classList.remove('open');
+function toggleMenu() {
+  menuState.isOpen = !menuState.isOpen;
+  const activeMenu = currentLanguage === 'es' ? menuState.esMenu : menuState.enMenu;
 
-      // Toggle content visibility
-      es.style.display = isSpanish ? 'none' : 'block';
-      en.style.display = isSpanish ? 'block' : 'none';
+  activeMenu.classList.toggle('open');
+  menuState.toggleElement.setAttribute('aria-expanded', menuState.isOpen);
 
-      // Toggle menu visibility
-      menuEs.style.display = isSpanish ? 'none' : 'flex';
-      menuEn.style.display = isSpanish ? 'flex' : 'none';
+  // Close the other menu if open
+  if (currentLanguage === 'es') {
+    menuState.enMenu.classList.remove('open');
+  } else {
+    menuState.esMenu.classList.remove('open');
+  }
+}
 
-      // Optional: Scroll to top when switching language
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+function toggleLanguage() {
+  // Close menu first
+  menuState.isOpen = false;
+  menuState.esMenu.classList.remove('open');
+  menuState.enMenu.classList.remove('open');
+  menuState.toggleElement.setAttribute('aria-expanded', 'false');
+
+  // Toggle language
+  currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+
+  // Update content visibility
+  document.getElementById('lang-es').style.display = currentLanguage === 'es' ? 'block' : 'none';
+  document.getElementById('lang-en').style.display = currentLanguage === 'en' ? 'block' : 'none';
+
+  // Update menu visibility
+  menuState.esMenu.style.display = currentLanguage === 'es' ? 'flex' : 'none';
+  menuState.enMenu.style.display = currentLanguage === 'en' ? 'flex' : 'none';
+
+  // Scroll to top smoothly
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  // Update URL without jumping
+  const firstSection = currentLanguage === 'es' ? 'historia' : 'story';
+  if (history.replaceState) {
+    history.replaceState(null, null, `#${firstSection}`);
+  } else {
+    window.location.hash = firstSection;
+  }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  if (menuState.isOpen &&
+      !event.target.closest('.menu-links') &&
+      !event.target.closest('.menu-toggle')) {
+    toggleMenu();
+  }
+});
   </script>
 </body>
 
