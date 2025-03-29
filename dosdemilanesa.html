@@ -262,20 +262,25 @@
 
 /* Mobile-specific tweaks */
 @media (max-width: 600px) {
-  .carousel-container {
-    margin: 0; /* avoid cutting edges */
-    padding-bottom: 1rem;
-  }
+.carousel-container {
+  margin: 0;
+  padding-bottom: 1rem;
+  overflow-x: auto;          /* just in case */
+  max-width: 100vw;          /* 🔧 important on some mobile browsers */
+  box-sizing: border-box;
+}
 
   .carousel-track {
     padding-left: 1rem;
     padding-right: 1rem;
+    white-space: nowrap; 
   }
 
-  .dev-card {
-    flex: 0 0 85vw;
-    max-width: 85vw;
-  }
+.dev-card {
+  flex: 0 0 85vw;
+  max-width: 85vw;
+  min-width: 85vw;            /* 🔧 Add this so the cards don’t shrink too small */
+}
 
   .dev-card p {
     font-size: 0.9rem;
