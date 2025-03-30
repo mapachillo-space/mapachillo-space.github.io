@@ -288,19 +288,30 @@ body {
     .section:target {
       scroll-margin-top: 90px;
     }
-    .audio-wrapper {
+
+.audio-wrapper {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.audio-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
 .play-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: rgba(255, 255, 255, 0.85);
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   padding: 0.4rem 0.6rem;
   z-index: 10;
@@ -310,6 +321,7 @@ body {
 .play-button:hover {
   background-color: #ffe0ea;
 }
+    
   </style>
 </head>
 
@@ -480,7 +492,7 @@ body {
         <div class="carousel-container">
           <div class="carousel-track">
 
-      <div class="dev-card guitarra-card">
+     <div class="dev-card guitarra-card">
         <div class="audio-wrapper">
           <img src="guitarra-sketch.svg" alt="harmonía" />
           <button class="play-button" onclick="toggleAudio(this)">▶️</button>
@@ -492,7 +504,7 @@ body {
         <p>
           <strong>29 de marzo de 2025</strong> — Creación de la armonía para el tema principal del juego.
         </p>
-</div>
+      </div>
             
             <div class="dev-card">
               <img src="demo-7.gif" alt="Ordenes y puntaje" />
