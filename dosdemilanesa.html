@@ -334,7 +334,7 @@ body {
       <!-- Spanish Menu -->
       <div class="menu-links" id="menuLinks-es">
         <button class="language-toggle" onclick="toggleLanguage()">🌐 ES / EN</button>
-        <a href="#historia">📜 Concepto</a>
+        <a href="#concepto">📜 Concepto</a>
         <a href="#noticias">🛠️ Noticias</a>
         <a href="#controles">🕹️ Controles</a>
         <a href="#personajes">🎭 Personajes</a>
@@ -344,7 +344,7 @@ body {
       <!-- English Menu -->
       <div class="menu-links" id="menuLinks-en" style="display: none">
         <button class="language-toggle" onclick="toggleLanguage()">🌐 EN / ES</button>
-        <a href="#story">📜 Concept</a>
+        <a href="#concept">📜 Concept</a>
         <a href="#devnews">🛠️ Dev News</a>
         <a href="#controls">🕹️ Controls</a>
         <a href="#characters">🎭 Characters</a>
@@ -356,7 +356,7 @@ body {
 </nav>
   <!-- Spanish -->
   <div id="lang-es">
-    <div class="section" id="historia">
+    <div class="section" id="concepto">
       <h2>Concepto</h2>
       <p>
         El cerdito Miguel tiene un carrito donde vende tortas, pero sus
@@ -595,7 +595,7 @@ body {
   </div>
   <!-- English -->
   <div id="lang-en" style="display: none">
-    <div class="section" id="story">
+    <div class="section" id="concept">
       <h2>Concept</h2>
       <p>
         Miguel the piglet runs a torta cart, but his customers have very
@@ -895,7 +895,7 @@ function toggleLanguage() {
   });
 
   // Update URL without jumping
-  const firstSection = currentLanguage === 'es' ? 'historia' : 'story';
+  const firstSection = currentLanguage === 'es' ? 'concepto' : 'concept';
   if (history.replaceState) {
     history.replaceState(null, null, `#${firstSection}`);
   } else {
