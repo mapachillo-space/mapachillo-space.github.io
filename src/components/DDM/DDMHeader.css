@@ -4,7 +4,6 @@
   top: 0;
   width: 100%;
   z-index: 100;
-  overflow: hidden;
   height: 140px; /* Match your banner SVG height */
 }
 
