@@ -1,0 +1,19 @@
+.language-toggle {
+  position: fixed; /* Key change - stays in viewport */
+  top: 20px;
+  right: 20px;
+  display: flex;
+  cursor: pointer;
+  z-index: 1000;
+  justify-content: center;
+  align-items: flex-end;
+  background: transparent;
+  border: none;
+}
+.world-icon {
+  font-size: 24px;
+}
+.lang-label {
+  color: white;
+  font-size: 14px;
+}

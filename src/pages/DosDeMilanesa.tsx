@@ -1,5 +1,6 @@
 import './DosDeMilanesa.css';
 import DDMHeader from '../components/DDM/DDMHeader';
+import TranslateButton from '../components/DDM/TranslateButton';
 import InfoCard from '../components/DDM/InfoCard';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
@@ -12,6 +13,7 @@ const DosDeMilanesa = () => {
   const { t } = useTranslation('DDMPageContent');
   return (
     <div className="dos-de-milanesa">
+      <TranslateButton />
       <DDMHeader />
       <main className="ddm-content">
         <InfoCard id="concepto" title={t('concept.title')}>

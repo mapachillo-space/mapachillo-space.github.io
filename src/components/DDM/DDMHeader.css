@@ -1,10 +1,9 @@
-/* components/DdmHeader.css */
 .ddm-header {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
-  height: 140px; /* Match your banner SVG height */
+  height: 140px; /* Banner SVG height */
 }
 
 .ddm-banner-container {
