@@ -27,61 +27,61 @@ const DosDeMilanesa = () => {
             <MediaCard
               date={t('devnews.APR01_25.date')}
               description={t('devnews.APR01_25.body')}
-              imageSrc="/public/dosdemilanesa/img/illust/guitarra-sketch.svg"
-              audioSrc="/public/dosdemilanesa/music/tema.mp3"
+              imageSrc="/dosdemilanesa/img/illust/guitarra-sketch.svg"
+              audioSrc="/dosdemilanesa/music/tema.mp3"
             />
             <ImageCard
               date={t('devnews.MAR30_25.date')}
               description={t('devnews.MAR30_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-8.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-8.gif"
               altText={t('devnews.MAR30_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR29_25.date')}
               description={t('devnews.MAR29_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-7.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-7.gif"
               altText={t('devnews.MAR29_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR28_25.date')}
               description={t('devnews.MAR28_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-6.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-6.gif"
               altText={t('devnews.MAR28_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR27_25.date')}
               description={t('devnews.MAR27_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-5.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-5.gif"
               altText={t('devnews.MAR27_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR26_25.date')}
               description={t('devnews.MAR26_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-3.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-3.gif"
               altText={t('devnews.MAR26_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR25_25.date')}
               description={t('devnews.MAR25_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-2.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-2.gif"
               altText={t('devnews.MAR25_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR24_25.date')}
               description={t('devnews.MAR24_25.body')}
-              imageSrc="/public/dosdemilanesa/img/screen-captures/demo-1.gif"
+              imageSrc="/dosdemilanesa/img/screen-captures/demo-1.gif"
               altText={t('devnews.MAR24_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR23_25.date')}
               description={t('devnews.MAR23_25.body')}
-              imageSrc="/public/dosdemilanesa/img/illust/control-sketch1.jpeg"
+              imageSrc="/dosdemilanesa/img/illust/control-sketch1.jpeg"
               altText={t('devnews.MAR23_25.alt')}
             />
             <ImageCard
               date={t('devnews.MAR22_25.date')}
               description={t('devnews.MAR22_25.body')}
-              imageSrc="/public/dosdemilanesa/img/illust/concept-sketch.jpeg"
+              imageSrc="/dosdemilanesa/img/illust/concept-sketch.jpeg"
               altText={t('devnews.MAR22_25.alt')}
             />
           </NewsCarousel>
