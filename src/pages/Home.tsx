@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div className="Home">
       <img
-        src="/public/mapachillo.png"
+        src="/mapachillo.png"
         alt="Under Construction"
         className="bouncingImage"
       />

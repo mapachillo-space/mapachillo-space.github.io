@@ -1,9 +1,14 @@
 .info-card {
+  overflow-x: clip;
   margin-bottom: 2rem;
   padding: 1rem;
   background-color: #fff1ec;
   border-radius: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.info-card h2 {
+  margin-top: 0; /* Removes default top margin */
+  margin-bottom: 0.5rem; /* Adds controlled space below heading */
 }
 .info-content {
   color: black;

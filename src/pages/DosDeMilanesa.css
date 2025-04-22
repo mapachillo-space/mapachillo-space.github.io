@@ -1,10 +1,10 @@
-/* GameFeaturePage.css */
+/* Top Level CSS */
+/* Page wide */
 .dos-de-milanesa {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 100vw;
-
+  max-width: 100vw !important;
   justify-content: center;
   align-items: center;
   font-family: 'Comic Neue', sans-serif;
@@ -27,22 +27,15 @@ h3 {
 }
 /* Main Content */
 .ddm-content {
+  overflow-x: clip;
   flex: 1;
   padding: 1rem;
-  max-width: 90%;
+  max-width: 80%;
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .ddm-content {
-    padding: 0.5rem;
     max-width: 100%;
-  }
-}
-
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .ddm-content {
-    padding: 0.5rem;
   }
 }
