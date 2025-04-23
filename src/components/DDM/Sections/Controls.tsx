@@ -9,7 +9,7 @@ const Controls = () => {
   const { t } = useTranslation('GeneralContent');
 
   return (
-    <InfoCard id="controls" title={t('controls.title')}>
+    <InfoCard id="controls" title={`🕹️${t('controls.title')}`}>
       {t('controls.body')}
     </InfoCard>
   );

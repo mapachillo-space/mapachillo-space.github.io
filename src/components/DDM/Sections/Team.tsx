@@ -9,7 +9,7 @@ const Team = () => {
   const { t } = useTranslation('GeneralContent');
 
   return (
-    <InfoCard id="controls" title={t('team.title')}>
+    <InfoCard id="controls" title={`👩‍🚀${t('team.title')}`}>
       <ul>
         <li>
           <strong>{t('team.members.gema.name')}</strong> —

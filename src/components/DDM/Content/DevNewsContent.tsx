@@ -1,6 +1,6 @@
 const devNews = {
   en: {
-    title: '🛠️ Dev News',
+    title: 'Dev News',
     APR01_25: {
       date: 'April 1, 2025',
       body: `Harmony created for the game's main theme.`,
@@ -64,7 +64,7 @@ const devNews = {
     },
   },
   es: {
-    title: '🛠️ Noticias de Desarrollo',
+    title: 'Noticias de Desarrollo',
     APR01_25: {
       date: '1 de abril de 2025',
       body: `Creación de la armonía para el tema principal del juego.`,

@@ -10,7 +10,7 @@ i18n.addResourceBundle('en', 'IngredientsContent', IngredientsContent.en);
 const Ingredients = () => {
   const { t } = useTranslation('IngredientsContent');
   return (
-    <InfoCard id="characters" title={t('title')}>
+    <InfoCard id="characters" title={`🥪${t('title')}`}>
       <h2>{t('base.title')}</h2>
       <div className="features-wrapper">
         <div className="features-container">

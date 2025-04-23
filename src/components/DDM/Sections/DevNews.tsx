@@ -12,7 +12,7 @@ i18n.addResourceBundle('en', 'DevNews', DevNewsContent.en);
 const DevNews = () => {
   const { t } = useTranslation('DevNews');
   return (
-    <InfoCard id="noticias" title={t('title')}>
+    <InfoCard id="noticias" title={`🛠️ ${t('title')}`}>
       <NewsCarousel>
         <MediaCard slug="APR01_25" />
         <ImageCard slug="MAR30_25" />

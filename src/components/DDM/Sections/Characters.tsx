@@ -10,13 +10,13 @@ i18n.addResourceBundle('en', 'CharactersContent', CharactersContent.en);
 const Characters = () => {
   const { t } = useTranslation('CharactersContent');
   return (
-    <InfoCard id="characters" title={t('title')}>
+    <InfoCard id="characters" title={`🎭${t('title')}`}>
       <div className="features-wrapper">
         <div className="highlight-container">
           <FeatureCard type="character" slug="miguel" />
         </div>
       </div>
-      <h2>{t('clients.title')}</h2>
+      <h2>👥{t('clients.title')}</h2>
       <div className="features-wrapper">
         <div className="features-container">
           <div className="features-card">
@@ -33,7 +33,7 @@ const Characters = () => {
           </div>
         </div>
       </div>
-      <h2>{t('obstacles.title')}</h2>
+      <h2>🛑{t('obstacles.title')}</h2>
       <div className="features-wrapper">
         <div className="highlight-container">
           <FeatureCard type="character" slug="obstacles.tlacuache" />

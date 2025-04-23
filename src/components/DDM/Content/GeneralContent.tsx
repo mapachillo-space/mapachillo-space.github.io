@@ -1,8 +1,9 @@
 const generalContent = {
   es: {
     concept: {
-      title: 'Concepto',
+      title: 'Conviertete en el Tortero más veloz del mundo',
       body: `El cerdito Miguel tiene un carrito donde vende tortas, pero sus clientes tienen gustos bastante peculiares. Con el paso del tiempo, su carrito se vuelve cada vez más popular: visita nuevas ciudades, llegan más y más clientes, y Miguel empieza a incorporar nuevas tortas e ingredientes. Ahora, Miguel tiene que atenderlos a todos rápidamente y mantenerlos contentos, mientras trata de no desperdiciar comida y maximizar sus ganancias.`,
+      demo: '¡Pruebalo ya!',
     },
     controls: {
       title: 'Controles',
@@ -32,8 +33,9 @@ const generalContent = {
   },
   en: {
     concept: {
-      title: 'Concept',
-      body: `Miguel the piglet runs a little cart where he sells tortas, but his customers have some pretty peculiar tastes. Over time, his cart becomes more and more popular: he visits new cities, sees more and more customers, and starts adding new tortas and ingredients. Now, Miguel has to serve everyone quickly and keep them happy, all while trying not to waste food and maximize his profits.`,
+      title: 'Become the speediest Torta slinger in the world',
+      body: `Miguel the piggy runs a little cart where he sells tortas, but his customers have some pretty peculiar tastes. Over time, his cart becomes more and more popular: he visits new cities, sees more and more customers, and starts adding new tortas and ingredients. Now, Miguel has to serve everyone quickly and keep them happy, all while trying not to waste food and maximize his profits.`,
+      demo: 'Try it now!',
     },
     controls: {
       title: 'Controls',
