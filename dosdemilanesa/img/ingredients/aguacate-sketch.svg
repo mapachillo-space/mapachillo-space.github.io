@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 595.3 841.9">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #a8d164;
+      }
+
+      .st1 {
+        fill: #865f39;
+      }
+
+      .st2 {
+        fill: #6ebe44;
+      }
+    </style>
+  </defs>
+  <path class="st2" d="M297.9,708.3c-104.6,0-249.1-83.7-189.4-251.1,77-215.8,84.7-323.7,189.4-323.7s107.8,90.6,189.4,323.7c58.4,168.1-84.7,251.1-189.4,251.1Z"/>
+  <g>
+    <path class="st0" d="M297.9,688.3c-95,0-225.3-77.5-171.4-233.8,70-201.3,77-300.9,171.4-300.9s98.2,84.4,171.4,300.9c53.3,156.3-77,233.8-171.4,233.8Z"/>
+    <ellipse class="st1" cx="297.2" cy="475.2" rx="84.1" ry="89.2"/>
+  </g>
+</svg>
