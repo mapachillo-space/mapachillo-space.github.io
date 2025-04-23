@@ -8,6 +8,7 @@ import pageContent from './PageContent';
 import NewsCarousel from '../components/DDM/NewsCarousel/index';
 import { ImageCard } from '../components/DDM/NewsCarousel/ImageCard';
 import { MediaCard } from '../components/DDM/NewsCarousel/MediaCard';
+import FeatureCard from '../components/DDM/FeatureCard';
 
 i18n.addResourceBundle('es', 'DDMPageContent', pageContent.es);
 i18n.addResourceBundle('en', 'DDMPageContent', pageContent.en);
@@ -88,6 +89,61 @@ const DosDeMilanesa = () => {
         </InfoCard>
         <InfoCard id="controls" title={t('controls.title')}>
           {t('controls.body')}
+        </InfoCard>
+        {/* characters info card */}
+        <InfoCard id="characters" title={t('characters.title')}>
+          <div className="characters-wrapper">
+            <div className="player-container">
+              <FeatureCard
+                title={t('characters.miguel.name')}
+                body={t('characters.miguel.description')}
+                img="/dosdemilanesa/img/characters/miggy-piggy-sketch.svg"
+              />
+            </div>
+          </div>
+          <h2>{t('characters.clients.title')}</h2>
+          <div className="characters-wrapper">
+            <div className="client-container">
+              <div className="client-card">
+                <FeatureCard
+                  title={t('characters.clients.gato.name')}
+                  body={t('characters.clients.gato.description')}
+                  img="/dosdemilanesa/img/characters/cat-sketch.svg"
+                />
+              </div>
+              <div className="client-card">
+                <FeatureCard
+                  title={t('characters.clients.perro.name')}
+                  body={t('characters.clients.perro.description')}
+                  img="/dosdemilanesa/img/characters/xolo-sketch.svg"
+                />
+              </div>
+              <div className="client-card">
+                <FeatureCard
+                  title={t('characters.clients.camaleon.name')}
+                  body={t('characters.clients.camaleon.description')}
+                  img="/dosdemilanesa/img/characters/chameleon-sketch.svg"
+                />
+              </div>
+              <div className="client-card">
+                <FeatureCard
+                  title={t('characters.clients.mamut.name')}
+                  body={t('characters.clients.mamut.description')}
+                  img="/dosdemilanesa/img/characters/mammoth-sketch.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <h2>{t('characters.obstacles.title')}</h2>
+          <div className="characters-wrapper">
+            <div className="player-container">
+              <FeatureCard
+                title={t('characters.obstacles.tlacuache.name')}
+                body={t('characters.obstacles.tlacuache.description')}
+                img="/dosdemilanesa/img/characters/tlacuache-sketch.svg"
+              />
+            </div>
+          </div>
         </InfoCard>
       </main>
     </div>

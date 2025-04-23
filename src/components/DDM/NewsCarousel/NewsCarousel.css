@@ -29,8 +29,8 @@
 
 @media (min-width: 768px) {
   .dev-card {
-    max-width: calc(50% - 0.5rem);
-    flex: 0 0 calc(50% - 0.5rem);
+    max-width: calc(40% - 0.5rem);
+    flex: 0 0 calc(40% - 0.5rem);
   }
 }
 
