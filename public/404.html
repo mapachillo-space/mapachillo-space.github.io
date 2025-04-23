@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      const validRoutes = ['/dosdemilanesa/demo', '/dosdemilanesa'];
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+      const fullPath = path + search + hash;
+
+      // Check if this is a known SPA route
+      if (validRoutes.some((route) => path.startsWith(route))) {
+        // Redirect to index.html for SPA handling
+        window.location.href = `/index.html?redirect=${encodeURIComponent(
+          fullPath
+        )}`;
+      } else {
+        // Show actual 404 content
+        document.body.innerHTML = `
+        <h1>404 Not Found</h1>
+        <p>The page ${path} doesn't exist.</p>
+        <a href="/">Return home</a>
+      `;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Fallback content if JS is disabled -->
+    <h1>404 Not Found</h1>
+    <p>Please enable JavaScript for proper routing.</p>
+  </body>
+</html>
