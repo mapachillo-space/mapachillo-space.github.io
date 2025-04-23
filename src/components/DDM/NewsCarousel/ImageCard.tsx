@@ -1,23 +1,24 @@
 import './NewsCarousel.css';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
+import DevNewsContent from '../Content/DevNewsContent';
+
+i18n.addResourceBundle('es', 'DevNews', DevNewsContent.es);
+i18n.addResourceBundle('en', 'DevNews', DevNewsContent.en);
 interface ImageCardProps {
-  date: string;
-  description: string;
-  imageSrc: string;
-  altText: string;
+  slug: string;
 }
 
-export const ImageCard = ({
-  date,
-  description,
-  imageSrc,
-  altText,
-}: ImageCardProps) => {
+const ImageCard = ({ slug }: ImageCardProps) => {
+  const { t } = useTranslation('DevNews');
   return (
     <div className="dev-card">
-      <img src={imageSrc} alt={altText} />
+      <img src={t(`${slug}.thumbnail`)} alt={t(`${slug}.alt`)} />
       <p>
-        <strong>{date}</strong> — {description}
+        <strong>{t(`${slug}.date`)}</strong> — {t(`${slug}.body`)}
       </p>
     </div>
   );
 };
+
+export default ImageCard;
