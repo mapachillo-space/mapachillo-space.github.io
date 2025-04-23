@@ -5,7 +5,7 @@ const CharactersContent = {
       name: 'Miguel',
       thumbnail: '/dosdemilanesa/img/characters/miggy-piggy-sketch.svg',
       alt: 'Miguel, un cerdito chef.',
-      description: `A Miguel le encanta cocinar y descubrir nuevas recetas. Está orgulloso de poder identificar qué le gusta a sus clientes para mantenerlos felices. Disfruta experimentar con ingredientes y sorprenderlos con combinaciones inesperadas y deliciosas. Si hay muchos clientes esperando, se estresa y empieza a moverse más rápido… se pone histérico.`,
+      description: `A Miguel le encanta cocinar y descubrir nuevas recetas. Está orgulloso de poder identificar qué le gusta a sus clientes para mantenerlos felices. Si hay muchos clientes esperando, se estresa y empieza a moverse más rápido… se pone histérico.`,
     },
     clients: {
       title: 'Clientes',
@@ -25,13 +25,13 @@ const CharactersContent = {
         name: 'Camaleones',
         thumbnail: '/dosdemilanesa/img/characters/chameleon-sketch.svg',
         alt: 'Camaleón, un cliente tímido.',
-        description: `Son tímidos y se disfrazan de otros clientes, pero sus ojos los delatan. Si les das el ingrediente especial equivocado, rechazan la orden. 🦎`,
+        description: `Son tímidos y se disfrazan. Si les das el complemento equivocado, rechazan la orden. 🦎`,
       },
       mamut: {
         name: 'Mamut',
         thumbnail: '/dosdemilanesa/img/characters/mammoth-sketch.svg',
         alt: 'Mamut, un cliente poderoso.',
-        description: `Amables, pero con memoria perfecta. Piden órdenes grandes, pero si reciben la orden equivocada, no lo olvidan y restan más puntos. 🐘 `,
+        description: `Tienen memoria perfecta. Piden órdenes enormes y si te equivocas te lo haran saber. 🐘 `,
       },
     },
     obstacles: {
@@ -70,13 +70,13 @@ const CharactersContent = {
         name: 'Chameleons',
         thumbnail: '/dosdemilanesa/img/characters/chameleon-sketch.svg',
         alt: 'A chameleon, a shy customer.',
-        description: `They're shy and disguise themselves as other customers—but their eyes give them away. If you give them the wrong special ingredient, they reject the order. 🦎`,
+        description: `They're shy and try to hide. If you give them the wrong topping, they reject the order.🦎`,
       },
       mamut: {
         name: 'Mammoth',
         thumbnail: '/dosdemilanesa/img/characters/mammoth-sketch.svg',
         alt: 'A mammoth, a powerful customer.',
-        description: `Kind, but with a perfect memory. They place large orders, but if you get it wrong, they don't forget—and dock extra points. 🐘`,
+        description: `They have perfect memory. They place huge orders, and will call out any mistakes. 🐘`,
       },
     },
     obstacles: {

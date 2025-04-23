@@ -5,6 +5,7 @@ import DevNews from '../components/DDM/Sections/DevNews';
 import Concept from '../components/DDM/Sections/Concept';
 import Controls from '../components/DDM/Sections/Controls';
 import Characters from '../components/DDM/Sections/Characters';
+import Ingredients from '../components/DDM/Sections/Ingredients';
 
 const DosDeMilanesa = () => {
   return (
@@ -16,6 +17,7 @@ const DosDeMilanesa = () => {
         <DevNews />
         <Controls />
         <Characters />
+        <Ingredients />
       </main>
     </div>
   );
