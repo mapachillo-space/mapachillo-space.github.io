@@ -1,0 +1,131 @@
+const devNews = {
+  en: {
+    title: 'Dev News',
+    APR01_25: {
+      date: 'April 1, 2025',
+      body: `Harmony created for the game's main theme.`,
+      alt: 'A guitar playing a melody.',
+      mediaSrc: '/dosdemilanesa/music/tema.mp3',
+      thumbnail: '/dosdemilanesa/img/illust/guitarra-sketch.svg',
+    },
+    MAR30_25: {
+      date: 'March 30, 2025',
+      body: `Chameleon, puppy, and mammoth characters added.`,
+      alt: 'A Gif showcasing the new characters.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-8.gif',
+    },
+    MAR29_25: {
+      date: 'March 29, 2025',
+      body: `Customer order system implemented, along with the scoring system: +1 point for correct orders, -1 for mistakes.`,
+      alt: 'A Gif showing the order system.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-7.gif',
+    },
+    MAR28_25: {
+      date: 'March 28, 2025',
+      body: `Designed the bread used to build tortas with ingredients.`,
+      alt: 'A Gif showing the bread design.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-6.gif',
+    },
+    MAR27_25: {
+      date: 'March 27, 2025',
+      body: `Designed the ingredient selection system for tortas.`,
+      alt: 'A Gif showing the ingredient selection system.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-5.gif',
+    },
+    MAR26_25: {
+      date: 'March 26, 2025',
+      body: `Designed the first customer (the cat) and implemented the system that makes customers appear and disappear on screen.`,
+      alt: 'A Gif showing the cat character.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-3.gif',
+    },
+    MAR25_25: {
+      date: 'March 25, 2025',
+      body: `Added the lanes where customers arrive and the area where ingredients are displayed and selected to make tortas.`,
+      alt: 'A Gif showing the lanes and ingredient area.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-2.gif',
+    },
+    MAR24_25: {
+      date: 'March 24, 2025',
+      body: `Designed Miguel, the main character, and integrated him into the demo environment. Miguel can currently be controlled by the player and moves side to side within the stage.`,
+      alt: 'A Gif showing the character Miguel, a pink pig in a chef outfit.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-1.gif',
+    },
+    MAR23_25: {
+      date: 'March 23, 2025',
+      body: `First sketch of the game's controls: knobs, a roller, and buttons for special ingredients. Inspired by classic arcade game setups.`,
+      alt: 'A digital sketch showing two controller layouts.',
+      thumbnail: '/dosdemilanesa/img/illust/control-sketch1.jpeg',
+    },
+    MAR22_25: {
+      date: 'March 22, 2025',
+      body: `First visual sketch of the game concept. Includes initial ideas for characters, scoring system, and proposals for each character's special abilities.`,
+      alt: 'A paper sketch showing a cartoon pig serving incoming lines of annoyed customers.',
+      thumbnail: '/dosdemilanesa/img/illust/concept-sketch.jpeg',
+    },
+  },
+  es: {
+    title: 'Noticias de Desarrollo',
+    APR01_25: {
+      date: '1 de abril de 2025',
+      body: `Creación de la armonía para el tema principal del juego.`,
+      alt: 'Una guitarra tocando una melodía.',
+      mediaSrc: '/dosdemilanesa/music/tema.mp3',
+      thumbnail: '/dosdemilanesa/img/illust/guitarra-sketch.svg',
+    },
+    MAR30_25: {
+      date: '30 de marzo de 2025',
+      body: `Se añadieron los personajes camaleón, perrito y mamut.`,
+      alt: 'Un Gif mostrando los nuevos personajes.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-8.gif',
+    },
+    MAR29_25: {
+      date: '29 de marzo de 2025',
+      body: `Se implemento el sistema de las ordenes de los clientes y el sistema de puntaje si la orden fue correcta (+1 punto) o incorrecta (-1). `,
+      alt: 'Un Gif mostrando el sistema de ordenes.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-7.gif',
+    },
+    MAR28_25: {
+      date: '28 de marzo de 2025',
+      body: `Se diseñó del pan para constuir la torta con los ingredientes.`,
+      alt: 'Un Gif mostrando el diseño del pan.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-6.gif',
+    },
+    MAR27_25: {
+      date: '27 de marzo de 2025',
+      body: `Se diseñó el sistema de seleccion de ingredientes para la torta.`,
+      alt: 'Un Gif mostrando el sistema de seleccion de ingredientes.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-5.gif',
+    },
+    MAR26_25: {
+      date: '26 de marzo de 2025',
+      body: `Se diseñó el primer cliente (el gato) y se implementó el sistema para hacer que los clientes aparezcan y desaparezcan del escenario.`,
+      alt: 'Un Gif mostrando el personaje del gato.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-3.gif',
+    },
+    MAR25_25: {
+      date: '25 de marzo de 2025',
+      body: `Se agregaron los carriles por los que llegan los clientes y el área donde se muestran y seleccionan los ingredientes para preparar las tortas.`,
+      alt: 'Un Gif mostrando los carriles y el área de ingredientes.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-2.gif',
+    },
+    MAR24_25: {
+      date: '24 de marzo de 2025',
+      body: `Diseño de Miguel, el personaje principal del juego, e integración inicial en el entorno del demo. Actualmente, Miguel puede ser controlado por el jugador y moverse de lado a lado dentro del escenario.`,
+      alt: 'Un Gif mostrando el personaje Miguel, un cerdo rosa vestido de chef.',
+      thumbnail: '/dosdemilanesa/img/screen-captures/demo-1.gif',
+    },
+    MAR23_25: {
+      date: '23 de marzo de 2025',
+      body: `Primer boceto de el control del videojuego: perillas, rodillo y botones dedicados a ingredientes especiales. Este concepto está inspirado en los controles clásicos de juegos arcade. `,
+      alt: 'Un boceto digital mostrando dos diseños de control.',
+      thumbnail: '/dosdemilanesa/img/illust/control-sketch1.jpeg',
+    },
+    MAR22_25: {
+      date: '22 de marzo de 2025',
+      body: `Primer boceto visual del concepto del juego. Incluye ideas iniciales de personajes, sistema de puntaje y propuestas para las habilidades especiales de cada uno.`,
+      alt: 'Un boceto en papel mostrando un cerdo caricaturesco sirviendo líneas de clientes molestos.',
+      thumbnail: '/dosdemilanesa/img/illust/concept-sketch.jpeg',
+    },
+  },
+};
+export default devNews;

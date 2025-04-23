@@ -1,0 +1,39 @@
+.features-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.highlight-container {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .highlight-container {
+    width: 100%;
+  }
+}
+.features-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.features-card {
+  width: calc(30% - 1rem);
+}
+@media (max-width: 768px) {
+  .features-card {
+    width: 100%;
+  }
+}

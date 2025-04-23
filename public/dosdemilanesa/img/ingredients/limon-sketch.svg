@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" version="1.1" viewBox="0 0 595.3 841.9">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fee640;
+      }
+
+      .st1 {
+        fill: #77c043;
+      }
+
+      .st2 {
+        fill: #f8edc1;
+      }
+
+      .st3 {
+        fill: #dde9a4;
+      }
+
+      .st4 {
+        stroke-linejoin: round;
+      }
+
+      .st4, .st5 {
+        fill: #deecc5;
+        stroke: #f3f6d6;
+        stroke-linecap: round;
+        stroke-width: .5px;
+      }
+
+      .st5 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <line class="st0" x1="88.9" y1="416" x2="144.3" y2="416"/>
+  <path class="st0" d="M72.1,400"/>
+  <line class="st0" x1="85.7" y1="436.6" x2="139.5" y2="435.4"/>
+  <path class="st0" d="M189.2,532.2"/>
+  <path class="st2" d="M259.8,519.8"/>
+  <g>
+    <g>
+      <path class="st3" d="M272.8,425.3c-19.2,86.9-70.5,176.4-108.1,170.4-37.6-6-47.2-105.2-28-192.1,19.2-86.9,70.5-176.3,108.1-170.3,37.6,6,47.2,105.2,28,192.1Z"/>
+      <path class="st1" d="M507.1,462.2c-4.4,20-41.2,30.9-82.1,24.4-40.9-6.5-70.5-28.1-66-48.1,4.4-20,41.2-30.9,82.1-24.4,40.9,6.5,70.5,28.1,66,48.1Z"/>
+    </g>
+    <line class="st4" x1="244.8" y1="233.2" x2="164.7" y2="595.6"/>
+    <line class="st4" x1="262.2" y1="464.1" x2="142.2" y2="388.1"/>
+    <line class="st4" x1="221.4" y1="552" x2="181" y2="288.3"/>
+    <line class="st5" x1="282.3" y1="328" x2="130.1" y2="515.9"/>
+    <path class="st1" d="M294.7,217.4c-133-16.8-175,72.5-198.6,179.1-24.9,112.5,3.9,217.3,108.6,228.2,133.6,13.9,259.7-52.9,284.6-165.4,24.9-112.5-50.9-223.8-194.6-241.9ZM272.8,425.3c-19.2,86.9-70.5,176.4-108.1,170.4-37.6-6-47.2-105.2-28-192.1s70.5-176.3,108.1-170.3c37.6,6,47.2,105.2,28,192.1Z"/>
+  </g>
+</svg>
